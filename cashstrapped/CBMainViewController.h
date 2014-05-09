@@ -8,6 +8,12 @@
 
 #import "CBFlipsideViewController.h"
 
-@interface CBMainViewController : UIViewController <CBFlipsideViewControllerDelegate>
+@interface CBMainViewController : UIViewController <CBFlipsideViewControllerDelegate, UIScrollViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIView *addExpenseHeaderView;
+@property (strong, nonatomic) IBOutlet UIView *expensesView;
+
+@property (strong, nonatomic) IBOutlet UIView *embeddedHistoryView;
 
 @end
