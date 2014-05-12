@@ -18,14 +18,6 @@
 {
     [super viewDidLoad];
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height * 2);
-    
-    self.addExpenseHeaderView.center = CGPointMake(self.addExpenseHeaderView.frame.size.width/2, self.addExpenseHeaderView.frame.size.height/2);
-    
-    CGRect embeddedHistoryFrame = self.scrollView.bounds;
-    embeddedHistoryFrame.origin.y = embeddedHistoryFrame.size.height;
-    self.embeddedHistoryView.frame = embeddedHistoryFrame;
-    
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.delegate = self;
     
@@ -38,7 +30,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+
     self.scrollView.contentOffset = CGPointZero;
+    
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height * 2);
+    
+    self.addExpenseHeaderView.center = CGPointMake(self.addExpenseHeaderView.frame.size.width/2, self.addExpenseHeaderView.frame.size.height/2);
+    
+    CGRect embeddedHistoryFrame = self.scrollView.bounds;
+    embeddedHistoryFrame.origin.y = embeddedHistoryFrame.size.height;
+    self.embeddedHistoryView.frame = embeddedHistoryFrame;
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +63,7 @@
 
 #pragma mark - Flipside View
 
-- (void)flipsideViewControllerDidFinish:(CBFlipsideViewController *)controller
+- (void)flipsideViewControllerDidFinish:(CBAddExpenseViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

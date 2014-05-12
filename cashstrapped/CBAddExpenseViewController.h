@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class CBFlipsideViewController;
+@class CBAddExpenseViewController;
 
 @protocol CBFlipsideViewControllerDelegate
-- (void)flipsideViewControllerDidFinish:(CBFlipsideViewController *)controller;
+- (void)flipsideViewControllerDidFinish:(CBAddExpenseViewController *)controller;
 @end
 
-@interface CBFlipsideViewController : UIViewController
+@interface CBAddExpenseViewController : UIViewController
 
 @property (weak, nonatomic) id <CBFlipsideViewControllerDelegate> delegate;
 

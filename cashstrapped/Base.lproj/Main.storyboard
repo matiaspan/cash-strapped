@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="-51" y="182"/>
         </scene>
-        <!--Flipside View Controller-->
+        <!--Add Expense View Controller-->
         <scene sceneID="z9J-Vg-hzE">
             <objects>
-                <viewController id="kIf-nA-PKG" customClass="CBFlipsideViewController" sceneMemberID="viewController">
+                <viewController id="kIf-nA-PKG" customClass="CBAddExpenseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tg4-aq-CMy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

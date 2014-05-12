@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Cannonball HQ. All rights reserved.
 //
 
-#import "CBFlipsideViewController.h"
+#import "CBAddExpenseViewController.h"
 
 @interface CBMainViewController : UIViewController <CBFlipsideViewControllerDelegate, UIScrollViewDelegate>
 
