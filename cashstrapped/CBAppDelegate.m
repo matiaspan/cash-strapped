@@ -7,6 +7,7 @@
 //
 
 #import "CBAppDelegate.h"
+#import "MagicalRecord+Setup.h"
 
 @implementation CBAppDelegate
 
@@ -15,6 +16,7 @@
     // Override point for customization after application launch.
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"CashStrapped"];
     
     return YES;
 }

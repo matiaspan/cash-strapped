@@ -152,6 +152,7 @@
 		54B1D3D5191928B000646E9D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5436F3F11921244E00B889D0 /* CashStrapped.xcdatamodeld */,
 				54B1D3D6191928B000646E9D /* cashstrapped-Info.plist */,
 				54B1D3D7191928B000646E9D /* InfoPlist.strings */,
 				54B1D3DA191928B000646E9D /* main.m */,
@@ -174,7 +175,6 @@
 			children = (
 				54B1D3F8191928B000646E9D /* cashstrappedTests-Info.plist */,
 				54B1D3F9191928B000646E9D /* InfoPlist.strings */,
-				5436F3F11921244E00B889D0 /* CashStrapped.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
