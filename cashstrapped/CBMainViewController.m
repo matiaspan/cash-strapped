@@ -55,8 +55,12 @@
     if (scrollView.contentOffset.y >= 0) {
         self.addExpenseHeaderView.alpha = 0.f;
     } else {
-        CGFloat offset = scrollView.contentOffset.y * -1.f;
+        CGFloat offset = scrollView.contentOffset.y * -.75f;
         self.addExpenseHeaderView.alpha = offset/self.addExpenseHeaderView.frame.size.height;
+    }
+    
+    if (self.addExpenseHeaderView.alpha >= 1 && scrollView.dragging) {
+        [self performSegueWithIdentifier:@"Add Expense" sender:self];
     }
 
 }
