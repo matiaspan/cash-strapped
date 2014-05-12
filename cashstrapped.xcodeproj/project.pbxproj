@@ -18,7 +18,7 @@
 		54B1D3DF191928B000646E9D /* CBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3DE191928B000646E9D /* CBAppDelegate.m */; };
 		54B1D3E2191928B000646E9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B1D3E0191928B000646E9D /* Main.storyboard */; };
 		54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E4191928B000646E9D /* CBMainViewController.m */; };
-		54B1D3E8191928B000646E9D /* CBFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E7191928B000646E9D /* CBFlipsideViewController.m */; };
+		54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E7191928B000646E9D /* CBAddExpenseViewController.m */; };
 		54B1D3EA191928B000646E9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B1D3E9191928B000646E9D /* Images.xcassets */; };
 		54B1D3F1191928B000646E9D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1D3F0191928B000646E9D /* XCTest.framework */; };
 		54B1D3F2191928B000646E9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1D3CE191928B000646E9D /* Foundation.framework */; };
@@ -55,8 +55,8 @@
 		54B1D3E1191928B000646E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54B1D3E3191928B000646E9D /* CBMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMainViewController.h; sourceTree = "<group>"; };
 		54B1D3E4191928B000646E9D /* CBMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMainViewController.m; sourceTree = "<group>"; };
-		54B1D3E6191928B000646E9D /* CBFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBFlipsideViewController.h; sourceTree = "<group>"; };
-		54B1D3E7191928B000646E9D /* CBFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBFlipsideViewController.m; sourceTree = "<group>"; };
+		54B1D3E6191928B000646E9D /* CBAddExpenseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAddExpenseViewController.h; sourceTree = "<group>"; };
+		54B1D3E7191928B000646E9D /* CBAddExpenseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBAddExpenseViewController.m; sourceTree = "<group>"; };
 		54B1D3E9191928B000646E9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		54B1D3EF191928B000646E9D /* cashstrappedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cashstrappedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B1D3F0191928B000646E9D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -141,8 +141,8 @@
 				54B1D3E0191928B000646E9D /* Main.storyboard */,
 				54B1D3E3191928B000646E9D /* CBMainViewController.h */,
 				54B1D3E4191928B000646E9D /* CBMainViewController.m */,
-				54B1D3E6191928B000646E9D /* CBFlipsideViewController.h */,
-				54B1D3E7191928B000646E9D /* CBFlipsideViewController.m */,
+				54B1D3E6191928B000646E9D /* CBAddExpenseViewController.h */,
+				54B1D3E7191928B000646E9D /* CBAddExpenseViewController.m */,
 				54B1D3E9191928B000646E9D /* Images.xcassets */,
 				54B1D3D5191928B000646E9D /* Supporting Files */,
 			);
@@ -314,8 +314,8 @@
 			files = (
 				5436F3F619212B3500B889D0 /* Entry.m in Sources */,
 				54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */,
-				54B1D3E8191928B000646E9D /* CBFlipsideViewController.m in Sources */,
 				5436F3F31921244E00B889D0 /* CashStrapped.xcdatamodeld in Sources */,
+				54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */,
 				54B1D3DB191928B000646E9D /* main.m in Sources */,
 				54B1D3DF191928B000646E9D /* CBAppDelegate.m in Sources */,
 			);

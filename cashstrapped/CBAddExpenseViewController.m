@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Cannonball HQ. All rights reserved.
 //
 
-#import "CBFlipsideViewController.h"
+#import "CBAddExpenseViewController.h"
 
-@interface CBFlipsideViewController ()
+@interface CBAddExpenseViewController ()
 
 @end
 
-@implementation CBFlipsideViewController
+@implementation CBAddExpenseViewController
 
 - (void)viewDidLoad
 {
@@ -30,7 +30,7 @@
 
 - (IBAction)done:(id)sender
 {
-    [self.delegate flipsideViewControllerDidFinish:self];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end
