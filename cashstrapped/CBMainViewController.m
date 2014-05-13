@@ -7,8 +7,11 @@
 //
 
 #import "CBMainViewController.h"
+#import <POPSpringAnimation.h>
 
-@interface CBMainViewController ()
+@interface CBMainViewController () {
+    BOOL animatedHeader;
+}
 
 @end
 
@@ -57,12 +60,30 @@
     } else {
         CGFloat offset = scrollView.contentOffset.y * -.75f;
         self.addExpenseHeaderView.alpha = offset/self.addExpenseHeaderView.frame.size.height;
+        
+        if (self.addExpenseHeaderView.alpha >= 1.f && !animatedHeader) {
+            [UIView animateWithDuration:.1f animations:^{
+                self.addExpenseHeaderView.transform = CGAffineTransformMakeScale(1.1f, 1.1f);
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:.1f animations:^{
+                    self.addExpenseHeaderView.transform = CGAffineTransformMakeScale(1.f, 1.f);
+                } completion:^(BOOL finished) {
+
+                }];
+            }];
+            
+            animatedHeader = YES;
+        }
     }
     
-    if (self.addExpenseHeaderView.alpha >= 1 && scrollView.dragging) {
-        [self performSegueWithIdentifier:@"Add Expense" sender:self];
-    }
+//    if (self.addExpenseHeaderView.alpha >= 1 && scrollView.dragging) {
+//        [self performSegueWithIdentifier:@"Add Expense" sender:self];
+//    }
 
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    animatedHeader = NO;
 }
 
 #pragma mark - Flipside View

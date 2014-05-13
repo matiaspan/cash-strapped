@@ -2,16 +2,19 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
+  - pop (1.0.4)
   - TSCurrencyTextField (0.1.0):
     - TSCurrencyTextField/Core
   - TSCurrencyTextField/Core (0.1.0)
 
 DEPENDENCIES:
   - MagicalRecord
+  - pop
   - TSCurrencyTextField
 
 SPEC CHECKSUMS:
   MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
+  pop: 63a4f5e8942077fed2efe195036ecc572c71c48c
   TSCurrencyTextField: 470b38fed516031349fec831249b9125e2da2a5a
 
 COCOAPODS: 0.32.1
