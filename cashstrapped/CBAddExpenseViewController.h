@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class TSCurrencyTextField;
 @class CBAddExpenseViewController;
 
 @protocol CBFlipsideViewControllerDelegate
@@ -16,6 +17,7 @@
 
 @interface CBAddExpenseViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet TSCurrencyTextField *amountTextField;
 @property (weak, nonatomic) id <CBFlipsideViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;

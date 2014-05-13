@@ -129,6 +129,9 @@
                                 <state key="normal" title="Add income">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addIncomeAction:" destination="kIf-nA-PKG" eventType="touchUpInside" id="USO-iy-Je6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FZA-aQ-DqG">
                                 <rect key="frame" x="190" y="249" width="90" height="30"/>
@@ -136,6 +139,9 @@
                                 <state key="normal" title="Add expense">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addExpenseAction:" destination="kIf-nA-PKG" eventType="touchUpInside" id="aUg-w4-8Qe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -20,22 +20,7 @@
 		54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E4191928B000646E9D /* CBMainViewController.m */; };
 		54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E7191928B000646E9D /* CBAddExpenseViewController.m */; };
 		54B1D3EA191928B000646E9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B1D3E9191928B000646E9D /* Images.xcassets */; };
-		54B1D3F1191928B000646E9D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1D3F0191928B000646E9D /* XCTest.framework */; };
-		54B1D3F2191928B000646E9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1D3CE191928B000646E9D /* Foundation.framework */; };
-		54B1D3F3191928B000646E9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1D3D2191928B000646E9D /* UIKit.framework */; };
-		54B1D3FB191928B000646E9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54B1D3F9191928B000646E9D /* InfoPlist.strings */; };
-		54B1D3FD191928B000646E9D /* cashstrappedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3FC191928B000646E9D /* cashstrappedTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		54B1D3F4191928B000646E9D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 54B1D3C3191928B000646E9D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 54B1D3CA191928B000646E9D;
-			remoteInfo = cashstrapped;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		30F1C36DAB764763B1EC594E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -58,7 +43,6 @@
 		54B1D3E6191928B000646E9D /* CBAddExpenseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAddExpenseViewController.h; sourceTree = "<group>"; };
 		54B1D3E7191928B000646E9D /* CBAddExpenseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBAddExpenseViewController.m; sourceTree = "<group>"; };
 		54B1D3E9191928B000646E9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		54B1D3EF191928B000646E9D /* cashstrappedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cashstrappedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B1D3F0191928B000646E9D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		54B1D3F8191928B000646E9D /* cashstrappedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cashstrappedTests-Info.plist"; sourceTree = "<group>"; };
 		54B1D3FA191928B000646E9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -75,16 +59,6 @@
 				54B1D3D3191928B000646E9D /* UIKit.framework in Frameworks */,
 				54B1D3CF191928B000646E9D /* Foundation.framework in Frameworks */,
 				49AFFDF1232A4F23A76D6143 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54B1D3EC191928B000646E9D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				54B1D3F1191928B000646E9D /* XCTest.framework in Frameworks */,
-				54B1D3F3191928B000646E9D /* UIKit.framework in Frameworks */,
-				54B1D3F2191928B000646E9D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				54B1D3CB191928B000646E9D /* cashstrapped.app */,
-				54B1D3EF191928B000646E9D /* cashstrappedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,24 +174,6 @@
 			productReference = 54B1D3CB191928B000646E9D /* cashstrapped.app */;
 			productType = "com.apple.product-type.application";
 		};
-		54B1D3EE191928B000646E9D /* cashstrappedTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 54B1D403191928B000646E9D /* Build configuration list for PBXNativeTarget "cashstrappedTests" */;
-			buildPhases = (
-				54B1D3EB191928B000646E9D /* Sources */,
-				54B1D3EC191928B000646E9D /* Frameworks */,
-				54B1D3ED191928B000646E9D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				54B1D3F5191928B000646E9D /* PBXTargetDependency */,
-			);
-			name = cashstrappedTests;
-			productName = cashstrappedTests;
-			productReference = 54B1D3EF191928B000646E9D /* cashstrappedTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,11 +183,6 @@
 				CLASSPREFIX = CB;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Cannonball HQ";
-				TargetAttributes = {
-					54B1D3EE191928B000646E9D = {
-						TestTargetID = 54B1D3CA191928B000646E9D;
-					};
-				};
 			};
 			buildConfigurationList = 54B1D3C6191928B000646E9D /* Build configuration list for PBXProject "cashstrapped" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -248,7 +198,6 @@
 			projectRoot = "";
 			targets = (
 				54B1D3CA191928B000646E9D /* cashstrapped */,
-				54B1D3EE191928B000646E9D /* cashstrappedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,14 +210,6 @@
 				54B1D3EA191928B000646E9D /* Images.xcassets in Resources */,
 				54B1D3D9191928B000646E9D /* InfoPlist.strings in Resources */,
 				54B1D3E2191928B000646E9D /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54B1D3ED191928B000646E9D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				54B1D3FB191928B000646E9D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,23 +262,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54B1D3EB191928B000646E9D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				54B1D3FD191928B000646E9D /* cashstrappedTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		54B1D3F5191928B000646E9D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 54B1D3CA191928B000646E9D /* cashstrapped */;
-			targetProxy = 54B1D3F4191928B000646E9D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		54B1D3D7191928B000646E9D /* InfoPlist.strings */ = {
@@ -465,46 +390,6 @@
 			};
 			name = Release;
 		};
-		54B1D404191928B000646E9D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/cashstrapped.app/cashstrapped";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cashstrapped/cashstrapped-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "cashstrappedTests/cashstrappedTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		54B1D405191928B000646E9D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/cashstrapped.app/cashstrapped";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cashstrapped/cashstrapped-Prefix.pch";
-				INFOPLIST_FILE = "cashstrappedTests/cashstrappedTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -522,15 +407,6 @@
 			buildConfigurations = (
 				54B1D401191928B000646E9D /* Debug */,
 				54B1D402191928B000646E9D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		54B1D403191928B000646E9D /* Build configuration list for PBXNativeTarget "cashstrappedTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				54B1D404191928B000646E9D /* Debug */,
-				54B1D405191928B000646E9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
