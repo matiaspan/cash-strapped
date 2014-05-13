@@ -75,15 +75,17 @@
             animatedHeader = YES;
         }
     }
-    
-//    if (self.addExpenseHeaderView.alpha >= 1 && scrollView.dragging) {
-//        [self performSegueWithIdentifier:@"Add Expense" sender:self];
-//    }
 
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     animatedHeader = NO;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (self.addExpenseHeaderView.alpha >= 1) {
+        [self performSegueWithIdentifier:@"Add Expense" sender:self];
+    }
 }
 
 #pragma mark - Flipside View
