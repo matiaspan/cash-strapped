@@ -21,6 +21,7 @@
 		54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E7191928B000646E9D /* CBAddExpenseViewController.m */; };
 		54B1D3EA191928B000646E9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B1D3E9191928B000646E9D /* Images.xcassets */; };
 		54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79619250C0F007B2B90 /* DailySummary.m */; };
+		54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		54B1D3FC191928B000646E9D /* cashstrappedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cashstrappedTests.m; sourceTree = "<group>"; };
 		54BAF79519250C0F007B2B90 /* DailySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailySummary.h; sourceTree = "<group>"; };
 		54BAF79619250C0F007B2B90 /* DailySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailySummary.m; sourceTree = "<group>"; };
+		54BAF79819253AC1007B2B90 /* CBDailySummaryDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDailySummaryDAO.h; sourceTree = "<group>"; };
+		54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDailySummaryDAO.m; sourceTree = "<group>"; };
 		DA1D6B7D2E3648399EEC2ECE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +78,8 @@
 				54BAF79619250C0F007B2B90 /* DailySummary.m */,
 				5436F3F419212B3500B889D0 /* Entry.h */,
 				5436F3F519212B3500B889D0 /* Entry.m */,
+				54BAF79819253AC1007B2B90 /* CBDailySummaryDAO.h */,
+				54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */,
 				5436F3F619212B3500B889D0 /* Entry.m in Sources */,
 				54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */,
 				54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */,

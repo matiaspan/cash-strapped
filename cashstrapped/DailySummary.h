@@ -13,6 +13,6 @@
 @interface DailySummary : NSManagedObject
 
 @property (nonatomic, retain) NSDate * date;
-@property (nonatomic, retain) NSNumber * amount;
+@property (nonatomic, retain) NSDecimalNumber * amount;
 
 @end
