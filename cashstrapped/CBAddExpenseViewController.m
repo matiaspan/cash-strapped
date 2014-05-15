@@ -7,7 +7,10 @@
 //
 
 #import "CBAddExpenseViewController.h"
+
 #import "Entry.h"
+#import "CBDailySummaryDAO.h"
+
 #import <TSCurrencyTextField/TSCurrencyTextField.h>
 
 @interface CBAddExpenseViewController ()
@@ -43,6 +46,8 @@
     entry.amount = decimalAmount;
     entry.createdAt = [NSDate date];
     
+    [[CBDailySummaryDAO sharedInstance] updateSummaryWithAmount:decimalAmount];
+    
     [self done:sender];
 }
 
@@ -52,6 +57,8 @@
     Entry *entry = [Entry MR_createEntity];
     entry.amount = decimalAmount;
     entry.createdAt = [NSDate date];
+    
+    [[CBDailySummaryDAO sharedInstance] updateSummaryWithAmount:decimalAmount];
     
     [self done:sender];
 }

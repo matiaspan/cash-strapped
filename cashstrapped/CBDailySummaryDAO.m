@@ -77,7 +77,7 @@ static NSCalendar *gregorianCalendar;
 #pragma mark - Utils
 
 - (NSDate *)filterOutDateComponentsFromDate:(NSDate *)date {
-    if (!gregorianCalendar) {
+    if (! gregorianCalendar) {
         gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     }
     
