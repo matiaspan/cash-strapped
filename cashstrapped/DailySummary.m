@@ -13,5 +13,6 @@
 
 @dynamic date;
 @dynamic amount;
+@dynamic dailyBudget;
 
 @end

@@ -2,6 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="DailySummary" representedClassName="DailySummary" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="dailyBudget" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <entity name="Entry" representedClassName="Entry" syncable="YES">
@@ -9,7 +10,7 @@
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DailySummary" positionX="-63" positionY="0" width="128" height="75"/>
+        <element name="DailySummary" positionX="-63" positionY="0" width="128" height="90"/>
         <element name="Entry" positionX="-63" positionY="-18" width="128" height="75"/>
     </elements>
 </model>
