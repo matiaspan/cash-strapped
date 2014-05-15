@@ -20,6 +20,7 @@
 		54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E4191928B000646E9D /* CBMainViewController.m */; };
 		54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E7191928B000646E9D /* CBAddExpenseViewController.m */; };
 		54B1D3EA191928B000646E9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B1D3E9191928B000646E9D /* Images.xcassets */; };
+		54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79619250C0F007B2B90 /* DailySummary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		54B1D3F8191928B000646E9D /* cashstrappedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cashstrappedTests-Info.plist"; sourceTree = "<group>"; };
 		54B1D3FA191928B000646E9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		54B1D3FC191928B000646E9D /* cashstrappedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cashstrappedTests.m; sourceTree = "<group>"; };
+		54BAF79519250C0F007B2B90 /* DailySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailySummary.h; sourceTree = "<group>"; };
+		54BAF79619250C0F007B2B90 /* DailySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailySummary.m; sourceTree = "<group>"; };
 		DA1D6B7D2E3648399EEC2ECE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,6 +71,8 @@
 		5436F3F719212B5100B889D0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				54BAF79519250C0F007B2B90 /* DailySummary.h */,
+				54BAF79619250C0F007B2B90 /* DailySummary.m */,
 				5436F3F419212B3500B889D0 /* Entry.h */,
 				5436F3F519212B3500B889D0 /* Entry.m */,
 			);
@@ -255,6 +260,7 @@
 			files = (
 				5436F3F619212B3500B889D0 /* Entry.m in Sources */,
 				54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */,
+				54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */,
 				5436F3F31921244E00B889D0 /* CashStrapped.xcdatamodeld in Sources */,
 				54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */,
 				54B1D3DB191928B000646E9D /* main.m in Sources */,
