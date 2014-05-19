@@ -7,7 +7,7 @@
 //
 
 #import "CBMainViewController.h"
-#import <POPSpringAnimation.h>
+#import <NGAParallaxMotion/NGAParallaxMotion.h>
 
 @interface CBMainViewController () {
     BOOL animatedHeader;
@@ -29,6 +29,8 @@
     self.navigationController.navigationBar.translucent = YES;
     
     self.addExpenseHeaderView.alpha = 0.f;
+    
+    self.backgroundImageView.parallaxIntensity = -48;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_MagicalRecord_Core 2
 #define COCOAPODS_VERSION_PATCH_MagicalRecord_Core 0
 
+// NGAParallaxMotion
+#define COCOAPODS_POD_AVAILABLE_NGAParallaxMotion
+#define COCOAPODS_VERSION_MAJOR_NGAParallaxMotion 1
+#define COCOAPODS_VERSION_MINOR_NGAParallaxMotion 0
+#define COCOAPODS_VERSION_PATCH_NGAParallaxMotion 2
+
 // TSCurrencyTextField
 #define COCOAPODS_POD_AVAILABLE_TSCurrencyTextField
 #define COCOAPODS_VERSION_MAJOR_TSCurrencyTextField 0

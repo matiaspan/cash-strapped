@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) IBOutlet UIView *embeddedHistoryView;
 
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
 @end

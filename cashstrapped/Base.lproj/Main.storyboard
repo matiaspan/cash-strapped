@@ -28,6 +28,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mock_baground" id="ms9-qQ-ZAy">
+                                <rect key="frame" x="-16" y="-28" width="352" height="624"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="uiV-DV-Sa4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +85,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="v2a-21-oRh"/>
+                    <navigationItem key="navigationItem" id="v2a-21-oRh">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="IZu-Rf-4oN">
+                            <connections>
+                                <segue destination="8wx-VH-Wzz" kind="modal" id="eoc-8w-wzL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addExpenseHeaderView" destination="9th-rS-lhP" id="b3b-E4-yta"/>
                         <outlet property="embeddedHistoryView" destination="n5V-Ag-Cxg" id="eB5-g2-dsZ"/>
@@ -108,6 +118,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ckp-Fn-sTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="481" y="-8"/>
+        </scene>
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="0gs-0B-Mti">
+            <objects>
+                <tableViewController id="wdd-yV-f3N" customClass="CBSettingsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LlK-1q-wbq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bUv-xY-tTz">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bUv-xY-tTz" id="k0o-Mm-xI3">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wdd-yV-f3N" id="4O5-Yx-smZ"/>
+                            <outlet property="delegate" destination="wdd-yV-f3N" id="6K7-vT-xRm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="iAX-nM-bKq">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="efr-6U-Fvy">
+                            <connections>
+                                <action selector="doneAction:" destination="wdd-yV-f3N" id="0xl-x7-Lby"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9h-XB-ilC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="-775"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xqe-0T-Qaa">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8wx-VH-Wzz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OH9-RQ-Nd5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wdd-yV-f3N" kind="relationship" relationship="rootViewController" id="r5Y-oc-JJf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfB-hl-akf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="481" y="-776"/>
         </scene>
         <!--Add Expense View Controller-->
         <scene sceneID="z9J-Vg-hzE">
@@ -190,6 +250,9 @@
             <point key="canvasLocation" x="481" y="823"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mock_baground" width="320" height="568"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
