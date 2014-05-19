@@ -10,6 +10,7 @@
 
 @class TSCurrencyTextField;
 @class CBAddExpenseViewController;
+@class FXBlurView;
 
 @protocol CBFlipsideViewControllerDelegate
 - (void)flipsideViewControllerDidFinish:(CBAddExpenseViewController *)controller;
@@ -17,8 +18,11 @@
 
 @interface CBAddExpenseViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (strong, nonatomic) IBOutlet FXBlurView *blurView;
 @property (strong, nonatomic) IBOutlet TSCurrencyTextField *amountTextField;
 @property (weak, nonatomic) id <CBFlipsideViewControllerDelegate> delegate;
+
 
 - (IBAction)done:(id)sender;
 

@@ -18,6 +18,8 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"CashStrapped"];
     
+    self.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    
     return YES;
 }
 							

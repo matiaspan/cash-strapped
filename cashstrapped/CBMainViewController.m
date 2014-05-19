@@ -8,6 +8,7 @@
 
 #import "CBMainViewController.h"
 #import <NGAParallaxMotion/NGAParallaxMotion.h>
+#import <FXBlurView/FXBlurView.h>
 
 @interface CBMainViewController () {
     BOOL animatedHeader;
@@ -99,9 +100,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showAlternate"]) {
-        [[segue destinationViewController] setDelegate:self];
-    }
+    UIViewController *destinationViewController = [segue destinationViewController];
+    destinationViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    
+    destinationViewController.view.transform = CGAffineTransformMakeTranslation(0, destinationViewController.view.frame.size.height);
+    
+    [UIView animateWithDuration:.3f delay:.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+        destinationViewController.view.transform = CGAffineTransformIdentity;
+    } completion:nil];
 }
 
 @end

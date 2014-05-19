@@ -23,6 +23,7 @@
 		54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79619250C0F007B2B90 /* DailySummary.m */; };
 		54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */; };
 		60C53732192A7BCD00F40B05 /* CBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */; };
+		60C53735192A8F9D00F40B05 /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C53734192A8F9D00F40B05 /* UIImage+Colors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDailySummaryDAO.m; sourceTree = "<group>"; };
 		60C53730192A7BCD00F40B05 /* CBSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSettingsViewController.h; sourceTree = "<group>"; };
 		60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSettingsViewController.m; sourceTree = "<group>"; };
+		60C53733192A8F9D00F40B05 /* UIImage+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Colors.h"; sourceTree = "<group>"; };
+		60C53734192A8F9D00F40B05 /* UIImage+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Colors.m"; sourceTree = "<group>"; };
 		DA1D6B7D2E3648399EEC2ECE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,6 +124,7 @@
 		54B1D3D4191928B000646E9D /* cashstrapped */ = {
 			isa = PBXGroup;
 			children = (
+				60C53736192A904E00F40B05 /* Categories */,
 				5436F3F719212B5100B889D0 /* Model */,
 				54B1D3DD191928B000646E9D /* CBAppDelegate.h */,
 				54B1D3DE191928B000646E9D /* CBAppDelegate.m */,
@@ -165,6 +169,15 @@
 				54B1D3F9191928B000646E9D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60C53736192A904E00F40B05 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				60C53733192A8F9D00F40B05 /* UIImage+Colors.h */,
+				60C53734192A8F9D00F40B05 /* UIImage+Colors.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +290,7 @@
 				54B1D3DB191928B000646E9D /* main.m in Sources */,
 				60C53732192A7BCD00F40B05 /* CBSettingsViewController.m in Sources */,
 				54B1D3DF191928B000646E9D /* CBAppDelegate.m in Sources */,
+				60C53735192A8F9D00F40B05 /* UIImage+Colors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

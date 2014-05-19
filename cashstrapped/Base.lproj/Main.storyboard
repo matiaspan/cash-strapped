@@ -29,14 +29,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mock_baground" id="ms9-qQ-ZAy">
-                                <rect key="frame" x="-16" y="-28" width="352" height="624"/>
+                                <rect key="frame" x="-26" y="-38" width="372" height="644"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="uiV-DV-Sa4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="xA4-4V-VrP">
+                                    <view opaque="NO" contentMode="scaleToFill" id="xA4-4V-VrP">
                                         <rect key="frame" x="0.0" y="133" width="320" height="302"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -55,21 +55,28 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="9th-rS-lhP">
                                         <rect key="frame" x="0.0" y="63" width="320" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Expense" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zde-zL-bak">
-                                                <rect key="frame" x="89" y="12" width="143" height="37"/>
+                                                <rect key="frame" x="128" y="17" width="101" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OXf-u0-tdS">
+                                                <rect key="frame" x="92" y="13" width="28" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="41"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <containerView contentMode="scaleToFill" id="n5V-Ag-Cxg">
                                         <rect key="frame" x="0.0" y="568" width="320" height="117"/>
@@ -95,10 +102,11 @@
                     <connections>
                         <outlet property="addExpenseHeaderView" destination="9th-rS-lhP" id="b3b-E4-yta"/>
                         <outlet property="backgroundImageView" destination="ms9-qQ-ZAy" id="3Vp-T4-4VH"/>
+                        <outlet property="dashboardContainerView" destination="YcL-YS-tdm" id="0zV-je-bQn"/>
                         <outlet property="embeddedHistoryView" destination="n5V-Ag-Cxg" id="eB5-g2-dsZ"/>
                         <outlet property="expensesView" destination="xA4-4V-VrP" id="iaw-G9-5Go"/>
                         <outlet property="scrollView" destination="uiV-DV-Sa4" id="k1F-Jg-zy5"/>
-                        <segue destination="3V8-wx-2xR" kind="modal" identifier="Add Expense" id="HKq-xo-xZx"/>
+                        <segue destination="3V8-wx-2xR" kind="modal" identifier="Add Expense" animates="NO" id="HKq-xo-xZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4L-l5-tyG" sceneMemberID="firstResponder"/>
@@ -111,6 +119,9 @@
                 <navigationController definesPresentationContext="YES" id="3V8-wx-2xR" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0UF-6y-aJs">
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="kIf-nA-PKG" kind="relationship" relationship="rootViewController" id="r9W-wi-g2x"/>
@@ -170,14 +181,30 @@
             </objects>
             <point key="canvasLocation" x="481" y="-776"/>
         </scene>
-        <!--Add Expense View Controller-->
+        <!--Add Expense View Controller - Add Expense-->
         <scene sceneID="z9J-Vg-hzE">
             <objects>
-                <viewController id="kIf-nA-PKG" customClass="CBAddExpenseViewController" sceneMemberID="viewController">
+                <viewController providesPresentationContextTransitionStyle="YES" id="kIf-nA-PKG" customClass="CBAddExpenseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tg4-aq-CMy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mock_baground" id="GMo-J3-JJr">
+                                <rect key="frame" x="-26" y="-38" width="372" height="644"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="YcL-YS-tdm" customClass="FXBlurView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="blurRadius" value="0"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="dynamic" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="DVH-eP-uIb" customClass="TSCurrencyTextField">
                                 <rect key="frame" x="20" y="200" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -205,9 +232,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="r0t-Vx-zmv">
+                    <navigationItem key="navigationItem" title="Add Expense" id="r0t-Vx-zmv">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="WuG-Ps-ZbD">
                             <connections>
                                 <action selector="done:" destination="kIf-nA-PKG" id="j28-pm-V55"/>
@@ -216,6 +243,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="amountTextField" destination="DVH-eP-uIb" id="1Zi-cc-AX1"/>
+                        <outlet property="backgroundImageView" destination="GMo-J3-JJr" id="AUM-Qt-u2W"/>
+                        <outlet property="blurView" destination="YcL-YS-tdm" id="2oN-tk-6uG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlJ-1o-FvB" sceneMemberID="firstResponder"/>

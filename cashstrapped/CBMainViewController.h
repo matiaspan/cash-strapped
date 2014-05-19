@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *addExpenseHeaderView;
 @property (strong, nonatomic) IBOutlet UIView *expensesView;
+@property (strong, nonatomic) IBOutlet UIView *dashboardContainerView;
 
 @property (strong, nonatomic) IBOutlet UIView *embeddedHistoryView;
 

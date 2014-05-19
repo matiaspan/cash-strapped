@@ -1,4 +1,6 @@
 PODS:
+  - BackgroundBlurEffectUIView (0.0.1)
+  - FXBlurView (1.6.1)
   - MagicalRecord (2.2):
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
@@ -9,12 +11,16 @@ PODS:
   - TSCurrencyTextField/Core (0.1.0)
 
 DEPENDENCIES:
+  - BackgroundBlurEffectUIView
+  - FXBlurView
   - MagicalRecord
   - NGAParallaxMotion
   - pop
   - TSCurrencyTextField
 
 SPEC CHECKSUMS:
+  BackgroundBlurEffectUIView: fe7a8d98c9bcf70079e349b89d93a21f55985c7e
+  FXBlurView: 855a881c8b5f89829748070928aa9447c3d3c726
   MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
   NGAParallaxMotion: 838d2172c270aee0f27c3e6e2b34bef7adbe49f2
   pop: 63a4f5e8942077fed2efe195036ecc572c71c48c

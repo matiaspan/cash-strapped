@@ -10,7 +10,9 @@
 
 #import "Entry.h"
 #import "CBDailySummaryDAO.h"
+#import "UIImage+Colors.h"
 
+#import <FXBlurView/FXBlurView.h>
 #import <TSCurrencyTextField/TSCurrencyTextField.h>
 
 @interface CBAddExpenseViewController ()
@@ -22,7 +24,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self.blurView setBlurEnabled:YES];
+    [self.blurView setDynamic:NO];
+    [self.blurView setBlurRadius:40];
+    [self.blurView setBackgroundColor:[UIColor whiteColor]];
+    [self.blurView setTintColor:[UIColor clearColor]];
+    
+    [self.navigationController.navigationBar setBarTintColor:self.backgroundImageView.image.averageColorForTop];
 }
 
 - (void)didReceiveMemoryWarning
