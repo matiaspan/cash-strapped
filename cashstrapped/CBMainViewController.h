@@ -19,4 +19,7 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
+@property (strong, nonatomic) IBOutlet UILabel *amountRemainingLabel;
+@property (strong, nonatomic) IBOutlet UILabel *budgetLabel;
+
 @end

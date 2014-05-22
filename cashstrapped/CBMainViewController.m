@@ -9,6 +9,8 @@
 #import "CBMainViewController.h"
 #import <NGAParallaxMotion/NGAParallaxMotion.h>
 #import <FXBlurView/FXBlurView.h>
+#import "DailySummary.h"
+#import "CBDailySummaryDAO.h"
 
 @interface CBMainViewController () {
     BOOL animatedHeader;
@@ -46,6 +48,17 @@
     CGRect embeddedHistoryFrame = self.scrollView.bounds;
     embeddedHistoryFrame.origin.y = embeddedHistoryFrame.size.height;
     self.embeddedHistoryView.frame = embeddedHistoryFrame;
+    
+    [self updateDashboard];
+}
+
+- (void)updateDashboard {
+    NSDecimalNumber *amountLeft = [[CBDailySummaryDAO sharedInstance] summaryForToday].amount;
+    NSDecimalNumber *budget = [[CBDailySummaryDAO sharedInstance] summaryForToday].dailyBudget;
+    
+    self.amountRemainingLabel.text = [NSString stringWithFormat:@"%@", amountLeft];
+    self.budgetLabel.text = [NSString stringWithFormat:@"%@", budget];
+
 }
 
 - (void)didReceiveMemoryWarning
