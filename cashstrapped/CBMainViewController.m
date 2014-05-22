@@ -57,7 +57,7 @@
     NSDecimalNumber *budget = [[CBDailySummaryDAO sharedInstance] summaryForToday].dailyBudget;
     
     self.amountRemainingLabel.text = [NSString stringWithFormat:@"%@", amountLeft];
-    self.budgetLabel.text = [NSString stringWithFormat:@"%@", budget];
+    self.budgetLabel.text = [NSString stringWithFormat:@"BUDGET\n%@", budget];
 
 }
 

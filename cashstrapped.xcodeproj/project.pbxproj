@@ -22,6 +22,7 @@
 		54B1D3EA191928B000646E9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B1D3E9191928B000646E9D /* Images.xcassets */; };
 		54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79619250C0F007B2B90 /* DailySummary.m */; };
 		54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */; };
+		605C8023192E6B710031413E /* CBDashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C8022192E6B710031413E /* CBDashboardView.m */; };
 		60C53732192A7BCD00F40B05 /* CBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */; };
 		60C53735192A8F9D00F40B05 /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C53734192A8F9D00F40B05 /* UIImage+Colors.m */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,8 @@
 		54BAF79619250C0F007B2B90 /* DailySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailySummary.m; sourceTree = "<group>"; };
 		54BAF79819253AC1007B2B90 /* CBDailySummaryDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDailySummaryDAO.h; sourceTree = "<group>"; };
 		54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDailySummaryDAO.m; sourceTree = "<group>"; };
+		605C8021192E6B710031413E /* CBDashboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDashboardView.h; sourceTree = "<group>"; };
+		605C8022192E6B710031413E /* CBDashboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDashboardView.m; sourceTree = "<group>"; };
 		60C53730192A7BCD00F40B05 /* CBSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSettingsViewController.h; sourceTree = "<group>"; };
 		60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSettingsViewController.m; sourceTree = "<group>"; };
 		60C53733192A8F9D00F40B05 /* UIImage+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Colors.h"; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		54B1D3D4191928B000646E9D /* cashstrapped */ = {
 			isa = PBXGroup;
 			children = (
+				605C8020192E6B600031413E /* Custom Views */,
 				60C53736192A904E00F40B05 /* Categories */,
 				5436F3F719212B5100B889D0 /* Model */,
 				54B1D3DD191928B000646E9D /* CBAppDelegate.h */,
@@ -169,6 +173,15 @@
 				54B1D3F9191928B000646E9D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		605C8020192E6B600031413E /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				605C8021192E6B710031413E /* CBDashboardView.h */,
+				605C8022192E6B710031413E /* CBDashboardView.m */,
+			);
+			name = "Custom Views";
 			sourceTree = "<group>";
 		};
 		60C53736192A904E00F40B05 /* Categories */ = {
@@ -282,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */,
+				605C8023192E6B710031413E /* CBDashboardView.m in Sources */,
 				5436F3F619212B3500B889D0 /* Entry.m in Sources */,
 				54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */,
 				54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */,
