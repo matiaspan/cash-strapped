@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class CBLabel;
+
 @interface CBDashboardView : UIView
+
+@property (strong, nonatomic) IBOutlet UILabel *budgetLabel;
+@property (strong, nonatomic) IBOutlet CBLabel *amountLabel;
+
+- (void)setAmountValue:(NSNumber *)number;
 
 @end

@@ -58,32 +58,38 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view opaque="NO" contentMode="scaleToFill" id="xA4-4V-VrP" userLabel="Dashboard Container">
-                                        <rect key="frame" x="0.0" y="133" width="320" height="366"/>
+                                        <rect key="frame" x="0.0" y="101" width="320" height="366"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="fKF-yf-FIS" customClass="CBDashboardView">
-                                                <rect key="frame" x="34" y="54" width="252" height="252"/>
+                                                <rect key="frame" x="34" y="43" width="252" height="252"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uEs-3O-ATD" customClass="CBLabel">
+                                                        <rect key="frame" x="42" y="95" width="168" height="61"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget 2500" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eNM-HF-aWj">
+                                                        <rect key="frame" x="66" y="203" width="120" height="37"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.86185258626937866" green="0.17709842324256897" blue="0.33801740407943726" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="amountLabel" destination="uEs-3O-ATD" id="I4Y-ah-fLr"/>
+                                                </connections>
                                             </view>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uEs-3O-ATD">
-                                                <rect key="frame" x="76" y="152" width="168" height="61"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="2"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget 2500" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eNM-HF-aWj">
-                                                <rect key="frame" x="100" y="260" width="120" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -110,10 +116,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addExpenseHeaderView" destination="9th-rS-lhP" id="b3b-E4-yta"/>
-                        <outlet property="amountRemainingLabel" destination="uEs-3O-ATD" id="Kwm-m7-JGI"/>
                         <outlet property="backgroundImageView" destination="ms9-qQ-ZAy" id="3Vp-T4-4VH"/>
-                        <outlet property="budgetLabel" destination="eNM-HF-aWj" id="cNo-eT-kBs"/>
                         <outlet property="dashboardContainerView" destination="YcL-YS-tdm" id="0zV-je-bQn"/>
+                        <outlet property="dashboardView" destination="fKF-yf-FIS" id="pGp-Fe-UWd"/>
                         <outlet property="embeddedHistoryView" destination="n5V-Ag-Cxg" id="eB5-g2-dsZ"/>
                         <outlet property="expensesView" destination="xA4-4V-VrP" id="iaw-G9-5Go"/>
                         <outlet property="scrollView" destination="uiV-DV-Sa4" id="k1F-Jg-zy5"/>

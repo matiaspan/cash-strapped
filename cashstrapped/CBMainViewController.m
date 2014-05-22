@@ -11,6 +11,7 @@
 #import <FXBlurView/FXBlurView.h>
 #import "DailySummary.h"
 #import "CBDailySummaryDAO.h"
+#import "CBDashboardView.h"
 
 @interface CBMainViewController () {
     BOOL animatedHeader;
@@ -56,8 +57,8 @@
     NSDecimalNumber *amountLeft = [[CBDailySummaryDAO sharedInstance] summaryForToday].amount;
     NSDecimalNumber *budget = [[CBDailySummaryDAO sharedInstance] summaryForToday].dailyBudget;
     
-    self.amountRemainingLabel.text = [NSString stringWithFormat:@"%@", amountLeft];
-    self.budgetLabel.text = [NSString stringWithFormat:@"BUDGET\n%@", budget];
+    [self.dashboardView setAmountValue:amountLeft];
+    self.dashboardView.budgetLabel.text = [NSString stringWithFormat:@"BUDGET\n%@", budget];
 
 }
 

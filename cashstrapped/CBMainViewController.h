@@ -8,6 +8,8 @@
 
 #import "CBAddExpenseViewController.h"
 
+@class CBDashboardView;
+
 @interface CBMainViewController : UIViewController <CBFlipsideViewControllerDelegate, UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -18,8 +20,6 @@
 @property (strong, nonatomic) IBOutlet UIView *embeddedHistoryView;
 
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
-
-@property (strong, nonatomic) IBOutlet UILabel *amountRemainingLabel;
-@property (strong, nonatomic) IBOutlet UILabel *budgetLabel;
+@property (strong, nonatomic) IBOutlet CBDashboardView *dashboardView;
 
 @end
