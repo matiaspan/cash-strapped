@@ -34,8 +34,9 @@
 - (void)animateNumber:(CADisplayLink *)link {
     static float DURATION = 1.0;
     float dt = ([link timestamp] - startTime) / DURATION;
+
     if (dt >= 1.0) {
-        self.text = [self.to stringValue];
+        self.text = [NSString stringWithFormat:@"%.2f", self.to.floatValue];
         [link removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
         return;
     }

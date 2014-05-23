@@ -47,6 +47,7 @@
         }
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kUDInitialImport"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
     return YES;
