@@ -63,15 +63,19 @@ static NSCalendar *gregorianCalendar;
 
 #pragma mark - Insert/Update
 
-- (void)updateSummaryWithAmount:(NSDecimalNumber *)amount {
-    DailySummary *todaySummary = [self summaryForToday];
+- (void)updateTodaySummaryWithAmount:(NSDecimalNumber *)amount {
+    [self updateSummaryForDate:[NSDate date] withAmount:amount];
+}
+
+- (void)updateSummaryForDate:(NSDate *)date withAmount:(NSDecimalNumber *)amount {
+    DailySummary *summary = [self summaryForDate:date];
     
-    if (! todaySummary) {
-        todaySummary = [DailySummary MR_createEntity];
-        todaySummary.date = [self filterOutDateComponentsFromDate:[NSDate date]];
+    if (! summary) {
+        summary = [DailySummary MR_createEntity];
+        summary.date = [self filterOutDateComponentsFromDate:date];
     }
     
-    todaySummary.amount = [todaySummary.amount decimalNumberByAdding:amount];
+    summary.amount = [summary.amount decimalNumberByAdding:amount];
 }
 
 #pragma mark - Utils

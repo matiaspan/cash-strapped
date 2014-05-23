@@ -31,7 +31,7 @@
             entry.amount = [[NSDecimalNumber alloc] initWithFloat:1.0f * (arc4random() % 500) / 500 * (arc4random() % 500)];
             entry.createdAt = [NSDate dateWithTimeIntervalSinceNow:- i * 8*3600];
             
-            [[CBDailySummaryDAO sharedInstance] updateSummaryWithAmount:entry.amount];
+            [[CBDailySummaryDAO sharedInstance] updateSummaryForDate:entry.createdAt withAmount:entry.amount];
             
             NSLog(@"Adding income with amount %@ and date %@.", entry.amount, entry.createdAt);
         }
@@ -41,7 +41,7 @@
             entry.amount = [[NSDecimalNumber alloc] initWithFloat:- 1.0f * (arc4random() % 500) / 500 * (arc4random() % 500)];
             entry.createdAt = [NSDate dateWithTimeIntervalSinceNow:- i * 16*3600];
             
-            [[CBDailySummaryDAO sharedInstance] updateSummaryWithAmount:entry.amount];
+            [[CBDailySummaryDAO sharedInstance] updateSummaryForDate:entry.createdAt withAmount:entry.amount];
             
             NSLog(@"Adding expense with amount %@ and date %@.", entry.amount, entry.createdAt);
         }

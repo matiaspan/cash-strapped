@@ -18,7 +18,8 @@
 - (NSArray *)summariesFrom:(NSDate *)fromDate to:(NSDate *)toDate;
 - (NSArray *)allSummaries;
 
-- (void)updateSummaryWithAmount:(NSDecimalNumber *)amount;
+- (void)updateTodaySummaryWithAmount:(NSDecimalNumber *)amount;
+- (void)updateSummaryForDate:(NSDate *)date withAmount:(NSDecimalNumber *)amount;
 
 + (CBDailySummaryDAO *)sharedInstance;
 

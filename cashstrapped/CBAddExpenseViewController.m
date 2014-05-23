@@ -55,7 +55,7 @@
     entry.amount = decimalAmount;
     entry.createdAt = [NSDate date];
     
-    [[CBDailySummaryDAO sharedInstance] updateSummaryWithAmount:decimalAmount];
+    [[CBDailySummaryDAO sharedInstance] updateTodaySummaryWithAmount:decimalAmount];
     
     [self done:sender];
 }
@@ -67,7 +67,7 @@
     entry.amount = decimalAmount;
     entry.createdAt = [NSDate date];
     
-    [[CBDailySummaryDAO sharedInstance] updateSummaryWithAmount:decimalAmount];
+    [[CBDailySummaryDAO sharedInstance] updateTodaySummaryWithAmount:decimalAmount];
     
     [self done:sender];
 }
