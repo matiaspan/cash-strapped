@@ -110,7 +110,7 @@
                     <navigationItem key="navigationItem" id="v2a-21-oRh">
                         <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="IZu-Rf-4oN">
                             <connections>
-                                <segue destination="8wx-VH-Wzz" kind="modal" id="eoc-8w-wzL"/>
+                                <segue destination="8wx-VH-Wzz" kind="modal" animates="NO" id="eoc-8w-wzL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
