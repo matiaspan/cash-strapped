@@ -10,19 +10,20 @@
 
 @interface CBLabel () {
     CFTimeInterval startTime;
-    NSNumberFormatter *numberFormatter;
 }
 
 @property (strong, nonatomic) NSNumber *from;
 @property (strong, nonatomic) NSNumber *to;
+@property (strong, nonatomic) NSNumberFormatter *numberFormatter;
 
 @end
 
 @implementation CBLabel
 
-- (void)animateFrom:(NSNumber *)from toNumber:(NSNumber *)to {
+- (void)animateFrom:(NSNumber *)from toNumber:(NSNumber *)to withNumberFormatter:(NSNumberFormatter *)numberFormatter {
     self.from = from;
     self.to = to;
+    self.numberFormatter = numberFormatter;
     
     self.text = [self.from stringValue];
     
@@ -33,28 +34,18 @@
 }
 
 - (void)animateNumber:(CADisplayLink *)link {
-
-    if (!numberFormatter) {
-        numberFormatter = [[NSNumberFormatter alloc] init];
-        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-        [numberFormatter setMaximumFractionDigits:2];
-        [numberFormatter setNilSymbol:@"—"];
-        [numberFormatter setLenient:YES];
-        [numberFormatter setCurrencySymbol:@""];
-        [numberFormatter setInternationalCurrencySymbol:@""];
-    }
     
     static float DURATION = 1.0;
     float dt = ([link timestamp] - startTime) / DURATION;
 
     if (dt >= DURATION) {
-        self.text = [numberFormatter stringFromNumber:self.to];
+        self.text = [self.numberFormatter stringFromNumber:self.to];
         [link removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
         return;
     }
     
     float current = ([self.to floatValue] - [self.from floatValue]) * dt + [self.from floatValue];
-    self.text = [numberFormatter stringFromNumber:@(current)];
+    self.text = [self.numberFormatter stringFromNumber:@(current)];
 }
 
 @end

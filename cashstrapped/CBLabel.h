@@ -10,6 +10,6 @@
 
 @interface CBLabel : UILabel
 
-- (void)animateFrom:(NSNumber *)from toNumber:(NSNumber *)to;
+- (void)animateFrom:(NSNumber *)from toNumber:(NSNumber *)to withNumberFormatter:(NSNumberFormatter *)numberFormatter;
 
 @end

@@ -19,6 +19,11 @@
 #define progressStartAngle -244.f
 #define progressEndAngle -296.f
 
+@interface CBDashboardView () {
+    NSNumberFormatter *numberFormatter;
+}
+
+@end
 @implementation CBDashboardView
 
 - (id)initWithFrame:(CGRect)frame
@@ -96,8 +101,19 @@
 }
 
 - (void)setAmountValue:(NSNumber *)number {
-    NSNumber *from = @([self.amountLabel.text floatValue]);
-    [self.amountLabel animateFrom:from toNumber:number];
+    
+    if (!numberFormatter) {
+        numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        [numberFormatter setMaximumFractionDigits:2];
+        [numberFormatter setNilSymbol:@"—"];
+        [numberFormatter setLenient:YES];
+        [numberFormatter setCurrencySymbol:@""];
+        [numberFormatter setInternationalCurrencySymbol:@""];
+    }
+    
+    NSNumber *from = [numberFormatter numberFromString:self.amountLabel.text];
+    [self.amountLabel animateFrom:from toNumber:number withNumberFormatter:numberFormatter];
 }
 
 @end
