@@ -12,7 +12,7 @@
 
 @interface Entry : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * amount;
+@property (nonatomic, retain) NSDecimalNumber * amount;
 @property (nonatomic, retain) NSDate * createdAt;
 
 @end
