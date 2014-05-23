@@ -66,7 +66,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="uEs-3O-ATD" customClass="CBLabel">
-                                                        <rect key="frame" x="42" y="95" width="168" height="61"/>
+                                                        <rect key="frame" x="48" y="95" width="156" height="61"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

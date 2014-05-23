@@ -50,6 +50,8 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
+    
     return YES;
 }
 							

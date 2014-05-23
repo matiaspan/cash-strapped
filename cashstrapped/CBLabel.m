@@ -10,6 +10,7 @@
 
 @interface CBLabel () {
     CFTimeInterval startTime;
+    NSNumberFormatter *numberFormatter;
 }
 
 @property (strong, nonatomic) NSNumber *from;
@@ -32,17 +33,28 @@
 }
 
 - (void)animateNumber:(CADisplayLink *)link {
+
+    if (!numberFormatter) {
+        numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        [numberFormatter setMaximumFractionDigits:2];
+        [numberFormatter setNilSymbol:@"—"];
+        [numberFormatter setLenient:YES];
+        [numberFormatter setCurrencySymbol:@""];
+        [numberFormatter setInternationalCurrencySymbol:@""];
+    }
+    
     static float DURATION = 1.0;
     float dt = ([link timestamp] - startTime) / DURATION;
 
-    if (dt >= 1.0) {
-        self.text = [NSString stringWithFormat:@"%.2f", self.to.floatValue];
+    if (dt >= DURATION) {
+        self.text = [numberFormatter stringFromNumber:self.to];
         [link removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
         return;
     }
     
     float current = ([self.to floatValue] - [self.from floatValue]) * dt + [self.from floatValue];
-    self.text = [NSString stringWithFormat:@"%.2f", current];
+    self.text = [numberFormatter stringFromNumber:@(current)];
 }
 
 @end
