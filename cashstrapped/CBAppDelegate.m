@@ -9,6 +9,9 @@
 #import "CBAppDelegate.h"
 #import "MagicalRecord+Setup.h"
 
+#import "Entry.h"
+#import "CBDailySummaryDAO.h"
+
 @implementation CBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -19,6 +22,32 @@
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"CashStrapped"];
     
     self.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    
+    // TODO: REMOVE ME BEFORE SHIPPING.
+    if (! [[NSUserDefaults standardUserDefaults] boolForKey:@"kUDInitialImport"]) {
+        
+        for (int i = 0; i < 200; i++) {
+            Entry *entry = [Entry MR_createEntity];
+            entry.amount = [[NSDecimalNumber alloc] initWithFloat:1.0f * (arc4random() % 500) / 500 * (arc4random() % 500)];
+            entry.createdAt = [NSDate dateWithTimeIntervalSinceNow:- i * 8*3600];
+            
+            [[CBDailySummaryDAO sharedInstance] updateSummaryWithAmount:entry.amount];
+            
+            NSLog(@"Adding income with amount %@ and date %@.", entry.amount, entry.createdAt);
+        }
+        
+        for (int i = 0; i < 100; i++) {
+            Entry *entry = [Entry MR_createEntity];
+            entry.amount = [[NSDecimalNumber alloc] initWithFloat:- 1.0f * (arc4random() % 500) / 500 * (arc4random() % 500)];
+            entry.createdAt = [NSDate dateWithTimeIntervalSinceNow:- i * 16*3600];
+            
+            [[CBDailySummaryDAO sharedInstance] updateSummaryWithAmount:entry.amount];
+            
+            NSLog(@"Adding expense with amount %@ and date %@.", entry.amount, entry.createdAt);
+        }
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kUDInitialImport"];
+    }
     
     return YES;
 }
