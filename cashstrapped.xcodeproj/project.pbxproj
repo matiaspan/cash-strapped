@@ -29,6 +29,11 @@
 		60265B991938FA2000C7DDB9 /* GISwitchSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60265B971938FA2000C7DDB9 /* GISwitchSettingCell.m */; };
 		605C8023192E6B710031413E /* CBDashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C8022192E6B710031413E /* CBDashboardView.m */; };
 		605C8026192E778F0031413E /* CBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C8025192E778F0031413E /* CBLabel.m */; };
+		60A64CE719390C0800DDCF13 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 60A64CDF19390C0800DDCF13 /* .gitignore */; };
+		60A64CE819390C0800DDCF13 /* ObjectiveFlickr.bridgesupport in Resources */ = {isa = PBXBuildFile; fileRef = 60A64CE119390C0800DDCF13 /* ObjectiveFlickr.bridgesupport */; };
+		60A64CE919390C0800DDCF13 /* ObjectiveFlickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A64CE319390C0800DDCF13 /* ObjectiveFlickr.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		60A64CEA19390C0800DDCF13 /* OFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A64CE519390C0800DDCF13 /* OFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		60A64CEB19390C0800DDCF13 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 60A64CE619390C0800DDCF13 /* README.md */; };
 		60C53732192A7BCD00F40B05 /* CBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */; };
 		60C53735192A8F9D00F40B05 /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C53734192A8F9D00F40B05 /* UIImage+Colors.m */; };
 /* End PBXBuildFile section */
@@ -76,6 +81,13 @@
 		605C8022192E6B710031413E /* CBDashboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDashboardView.m; sourceTree = "<group>"; };
 		605C8024192E778F0031413E /* CBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLabel.h; sourceTree = "<group>"; };
 		605C8025192E778F0031413E /* CBLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLabel.m; sourceTree = "<group>"; };
+		60A64CDF19390C0800DDCF13 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		60A64CE119390C0800DDCF13 /* ObjectiveFlickr.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ObjectiveFlickr.bridgesupport; sourceTree = "<group>"; };
+		60A64CE219390C0800DDCF13 /* ObjectiveFlickr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveFlickr.h; sourceTree = "<group>"; };
+		60A64CE319390C0800DDCF13 /* ObjectiveFlickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveFlickr.m; sourceTree = "<group>"; };
+		60A64CE419390C0800DDCF13 /* OFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFUtilities.h; sourceTree = "<group>"; };
+		60A64CE519390C0800DDCF13 /* OFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFUtilities.m; sourceTree = "<group>"; };
+		60A64CE619390C0800DDCF13 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		60C53730192A7BCD00F40B05 /* CBSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSettingsViewController.h; sourceTree = "<group>"; };
 		60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSettingsViewController.m; sourceTree = "<group>"; };
 		60C53733192A8F9D00F40B05 /* UIImage+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Colors.h"; sourceTree = "<group>"; };
@@ -137,6 +149,7 @@
 		54B1D3CD191928B000646E9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60A64CDE19390C0800DDCF13 /* objectiveflickr */,
 				54B1D3CE191928B000646E9D /* Foundation.framework */,
 				54B1D3D0191928B000646E9D /* CoreGraphics.framework */,
 				54B1D3D2191928B000646E9D /* UIKit.framework */,
@@ -222,6 +235,28 @@
 			name = "Custom Views";
 			sourceTree = "<group>";
 		};
+		60A64CDE19390C0800DDCF13 /* objectiveflickr */ = {
+			isa = PBXGroup;
+			children = (
+				60A64CDF19390C0800DDCF13 /* .gitignore */,
+				60A64CE019390C0800DDCF13 /* BridgeSupport */,
+				60A64CE219390C0800DDCF13 /* ObjectiveFlickr.h */,
+				60A64CE319390C0800DDCF13 /* ObjectiveFlickr.m */,
+				60A64CE419390C0800DDCF13 /* OFUtilities.h */,
+				60A64CE519390C0800DDCF13 /* OFUtilities.m */,
+				60A64CE619390C0800DDCF13 /* README.md */,
+			);
+			path = objectiveflickr;
+			sourceTree = "<group>";
+		};
+		60A64CE019390C0800DDCF13 /* BridgeSupport */ = {
+			isa = PBXGroup;
+			children = (
+				60A64CE119390C0800DDCF13 /* ObjectiveFlickr.bridgesupport */,
+			);
+			path = BridgeSupport;
+			sourceTree = "<group>";
+		};
 		60C53736192A904E00F40B05 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,7 +321,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A64CEB19390C0800DDCF13 /* README.md in Resources */,
+				60A64CE719390C0800DDCF13 /* .gitignore in Resources */,
 				54B1D3EA191928B000646E9D /* Images.xcassets in Resources */,
+				60A64CE819390C0800DDCF13 /* ObjectiveFlickr.bridgesupport in Resources */,
 				54B1D3D9191928B000646E9D /* InfoPlist.strings in Resources */,
 				54B1D3E2191928B000646E9D /* Main.storyboard in Resources */,
 			);
@@ -334,6 +372,7 @@
 			files = (
 				54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */,
 				605C8023192E6B710031413E /* CBDashboardView.m in Sources */,
+				60A64CE919390C0800DDCF13 /* ObjectiveFlickr.m in Sources */,
 				54B473DC1939036000048937 /* CBHistoryTableViewController.m in Sources */,
 				60265B991938FA2000C7DDB9 /* GISwitchSettingCell.m in Sources */,
 				5436F3F619212B3500B889D0 /* Entry.m in Sources */,
@@ -348,6 +387,7 @@
 				605C8026192E778F0031413E /* CBLabel.m in Sources */,
 				54B473E21939072700048937 /* MonthlySummary.m in Sources */,
 				54B1D3DF191928B000646E9D /* CBAppDelegate.m in Sources */,
+				60A64CEA19390C0800DDCF13 /* OFUtilities.m in Sources */,
 				60C53735192A8F9D00F40B05 /* UIImage+Colors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

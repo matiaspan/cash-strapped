@@ -1,4 +1,23 @@
 PODS:
+  - AFNetworking (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.2.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.4):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.4)
+  - AFNetworking/Security (2.2.4)
+  - AFNetworking/Serialization (2.2.4)
+  - AFNetworking/UIKit (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - BackgroundBlurEffectUIView (0.0.1)
   - FXBlurView (1.6.1)
   - MagicalRecord (2.2):
@@ -11,6 +30,7 @@ PODS:
   - TSCurrencyTextField/Core (0.1.0)
 
 DEPENDENCIES:
+  - AFNetworking (~> 2)
   - BackgroundBlurEffectUIView
   - FXBlurView
   - MagicalRecord
@@ -19,11 +39,12 @@ DEPENDENCIES:
   - TSCurrencyTextField
 
 SPEC CHECKSUMS:
-  BackgroundBlurEffectUIView: fe7a8d98c9bcf70079e349b89d93a21f55985c7e
-  FXBlurView: 855a881c8b5f89829748070928aa9447c3d3c726
-  MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
-  NGAParallaxMotion: 838d2172c270aee0f27c3e6e2b34bef7adbe49f2
-  pop: 63a4f5e8942077fed2efe195036ecc572c71c48c
-  TSCurrencyTextField: 470b38fed516031349fec831249b9125e2da2a5a
+  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  BackgroundBlurEffectUIView: a624fc0881dbf570dd9fd1d2f6b188c8107a24e8
+  FXBlurView: 1d01b96076d65027314d1be024c7506c292392aa
+  MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
+  NGAParallaxMotion: f25d6b7e4eefe1c94211dbf402cd3563e56d46f3
+  pop: 626af22f9f3b6eb866141a1af7bfd909dac1851e
+  TSCurrencyTextField: d63c385890f2d41200ecdd2268f01fd5968405cc
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

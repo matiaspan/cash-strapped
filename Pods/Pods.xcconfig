@@ -1,7 +1,7 @@
 CLANG_CXX_LANGUAGE_STANDARD = c++11
 CLANG_CXX_LIBRARY = libc++
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/BackgroundBlurEffectUIView" "${PODS_ROOT}/Headers/FXBlurView" "${PODS_ROOT}/Headers/MagicalRecord" "${PODS_ROOT}/Headers/NGAParallaxMotion" "${PODS_ROOT}/Headers/TSCurrencyTextField" "${PODS_ROOT}/Headers/pop"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/BackgroundBlurEffectUIView" -isystem "${PODS_ROOT}/Headers/FXBlurView" -isystem "${PODS_ROOT}/Headers/MagicalRecord" -isystem "${PODS_ROOT}/Headers/NGAParallaxMotion" -isystem "${PODS_ROOT}/Headers/TSCurrencyTextField" -isystem "${PODS_ROOT}/Headers/pop"
-OTHER_LDFLAGS = -ObjC -lc++ -framework Accelerate -framework CoreData -framework QuartzCore -framework UIKit
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/BackgroundBlurEffectUIView" "${PODS_ROOT}/Headers/FXBlurView" "${PODS_ROOT}/Headers/MagicalRecord" "${PODS_ROOT}/Headers/NGAParallaxMotion" "${PODS_ROOT}/Headers/TSCurrencyTextField" "${PODS_ROOT}/Headers/pop"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/AFNetworking" -isystem "${PODS_ROOT}/Headers/BackgroundBlurEffectUIView" -isystem "${PODS_ROOT}/Headers/FXBlurView" -isystem "${PODS_ROOT}/Headers/MagicalRecord" -isystem "${PODS_ROOT}/Headers/NGAParallaxMotion" -isystem "${PODS_ROOT}/Headers/TSCurrencyTextField" -isystem "${PODS_ROOT}/Headers/pop"
+OTHER_LDFLAGS = -ObjC -lc++ -framework Accelerate -framework CoreData -framework CoreGraphics -framework MobileCoreServices -framework QuartzCore -framework Security -framework SystemConfiguration -framework UIKit
 PODS_ROOT = ${SRCROOT}/Pods

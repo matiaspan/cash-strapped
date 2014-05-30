@@ -12,18 +12,19 @@
 #import "Entry.h"
 #import "CBDailySummaryDAO.h"
 
+#import "ObjectiveFlickr.h"
+
+NSString * const kFlickrAPIKey = @"24f708f320b1f350bfda1378f89f809f";
+NSString * const kFlickrSecret = @"fc68f719f5eadd40";
+
+@interface CBAppDelegate() {
+    ObjectiveFlickr *_flickr;
+}
+
+@end
 @implementation CBAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"CashStrapped"];
-    
-    self.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    
-    // TODO: REMOVE ME BEFORE SHIPPING.
+- (void)mockupInitialImport {
     if (! [[NSUserDefaults standardUserDefaults] boolForKey:@"kUDInitialImport"]) {
         
         for (int i = 0; i < 200; i++) {
@@ -49,12 +50,33 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kUDInitialImport"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Override point for customization after application launch.
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"CashStrapped"];
+    
+    self.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    
+    // TODO: REMOVE ME BEFORE SHIPPING.
+    [self mockupInitialImport];
     
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
+
+    _flickr = [[ObjectiveFlickr alloc] initWithAPIKey:kFlickrAPIKey sharedSecret:kFlickrSecret];
+
+    [_flickr sendWithMethod:@"GET" path:@"flickr.interestingness.getList" arguments:@{@"per_page": @3} success:^(NSDictionary *responseDictionary) {
+                        // do something
+    } failure:^(NSInteger statusCode, NSError *error) {
+                        // do something else
+    }];
     
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
