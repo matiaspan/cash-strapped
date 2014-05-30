@@ -12,10 +12,11 @@
     <entity name="MonthlySummary" representedClassName="MonthlySummary" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="monthName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="DailySummary" positionX="-63" positionY="0" width="128" height="90"/>
         <element name="Entry" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="MonthlySummary" positionX="-63" positionY="18" width="128" height="73"/>
+        <element name="MonthlySummary" positionX="-63" positionY="18" width="128" height="88"/>
     </elements>
 </model>

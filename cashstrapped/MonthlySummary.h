@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSDecimalNumber * amount;
 @property (nonatomic, retain) NSDate * date;
+@property (nonatomic, retain) NSString * monthName;
 
 @end

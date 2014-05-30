@@ -13,6 +13,7 @@
 
 static CBMonthlySummaryDAO *_sharedInstance = nil;
 
+static NSDateFormatter *dateFormatter;
 static NSCalendar *gregorianCalendar;
 
 #pragma mark - Singleton
@@ -52,6 +53,7 @@ static NSCalendar *gregorianCalendar;
     if (! summary) {
         summary = [MonthlySummary MR_createEntity];
         summary.date = [self filterOutDateComponentsFromDate:date];
+        summary.monthName = [self monthNameFromDate:date];
     }
     
     summary.amount = [summary.amount decimalNumberByAdding:amount];
@@ -68,6 +70,20 @@ static NSCalendar *gregorianCalendar;
     NSDateComponents *components = [gregorianCalendar components:NSMonthCalendarUnit|NSYearCalendarUnit
                                                         fromDate:date];
     return [gregorianCalendar dateFromComponents:components];
+}
+
+- (NSString *)monthNameFromDate:(NSDate *)date {
+    if (! gregorianCalendar) {
+        gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    }
+    
+    if (! dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+    }
+    
+    NSDateComponents *components = [gregorianCalendar components:NSMonthCalendarUnit|NSYearCalendarUnit
+                                                        fromDate:date];
+    return [dateFormatter standaloneMonthSymbols][[components month] - 1];
 }
 
 @end

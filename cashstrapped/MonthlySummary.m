@@ -13,5 +13,6 @@
 
 @dynamic amount;
 @dynamic date;
+@dynamic monthName;
 
 @end
