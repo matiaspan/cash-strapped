@@ -51,7 +51,7 @@ static NSCalendar *gregorianCalendar;
     NSArray *results = [DailySummary MR_findAllWithPredicate:predicate];
     
     if ([results count]) {
-        return results[0];
+        return results;
     } else {
         return nil;
     }
