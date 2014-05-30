@@ -69,9 +69,9 @@ NSString * const kFlickrSecret = @"fc68f719f5eadd40";
     _flickr = [[ObjectiveFlickr alloc] initWithAPIKey:kFlickrAPIKey sharedSecret:kFlickrSecret];
 
     [_flickr sendWithMethod:@"GET" path:@"flickr.interestingness.getList" arguments:@{@"per_page": @3} success:^(NSDictionary *responseDictionary) {
-                        // do something
+
     } failure:^(NSInteger statusCode, NSError *error) {
-                        // do something else
+
     }];
     
     return YES;
