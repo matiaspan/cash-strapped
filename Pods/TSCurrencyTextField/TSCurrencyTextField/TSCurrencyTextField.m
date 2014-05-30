@@ -51,6 +51,7 @@
     _currencyNumberFormatter.usesGroupingSeparator = YES;
     
     _currencyTextFieldDelegate = [TSCurrencyTextFieldDelegate new];
+    _currencyNumberFormatter.currencySymbol = @"";
     [super setDelegate: _currencyTextFieldDelegate];
     
     [self setText: @"0"];
