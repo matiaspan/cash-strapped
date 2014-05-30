@@ -15,7 +15,7 @@
 - (MonthlySummary *)monthlySummaryForDate:(NSDate *)date;
 - (NSArray *)allMonthlySummaries;
 
-- (void)updateMonthlySummaryForDate:(NSDate *)date withAmount:(NSDecimalNumber *)amount;
+- (MonthlySummary *)updateMonthlySummaryForDate:(NSDate *)date withAmount:(NSDecimalNumber *)amount;
 
 + (CBMonthlySummaryDAO *)sharedInstance;
 

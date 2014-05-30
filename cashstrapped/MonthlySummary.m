@@ -7,6 +7,7 @@
 //
 
 #import "MonthlySummary.h"
+#import "DailySummary.h"
 
 
 @implementation MonthlySummary
@@ -14,5 +15,6 @@
 @dynamic amount;
 @dynamic date;
 @dynamic monthName;
+@dynamic dailySummaries;
 
 @end

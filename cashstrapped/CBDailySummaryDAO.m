@@ -79,7 +79,7 @@ static NSCalendar *gregorianCalendar;
     summary.amount = [summary.amount decimalNumberByAdding:amount];
     
     // Make sure we update the monthly values too.
-    [[CBMonthlySummaryDAO sharedInstance] updateMonthlySummaryForDate:date withAmount:amount];
+    summary.monthlySummary = [[CBMonthlySummaryDAO sharedInstance] updateMonthlySummaryForDate:date withAmount:amount];
 }
 
 #pragma mark - Utils

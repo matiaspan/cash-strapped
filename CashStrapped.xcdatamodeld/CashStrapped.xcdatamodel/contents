@@ -4,6 +4,7 @@
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
         <attribute name="dailyBudget" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="monthlySummary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MonthlySummary" inverseName="dailySummaries" inverseEntity="MonthlySummary" syncable="YES"/>
     </entity>
     <entity name="Entry" representedClassName="Entry" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
@@ -13,10 +14,11 @@
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="monthName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dailySummaries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DailySummary" inverseName="monthlySummary" inverseEntity="DailySummary" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DailySummary" positionX="-63" positionY="0" width="128" height="90"/>
+        <element name="DailySummary" positionX="-63" positionY="0" width="128" height="103"/>
         <element name="Entry" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="MonthlySummary" positionX="-63" positionY="18" width="128" height="88"/>
+        <element name="MonthlySummary" positionX="-63" positionY="18" width="128" height="103"/>
     </elements>
 </model>

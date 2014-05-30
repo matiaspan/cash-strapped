@@ -8,7 +8,18 @@
 
 #import "CBHistoryTableViewController.h"
 
-@interface CBHistoryTableViewController ()
+// DAO
+#import "CBMonthlySummaryDAO.h"
+#import "CBDailySummaryDAO.h"
+
+// Model
+#import "MonthlySummary.h"
+#import "DailySummary.h"
+
+@interface CBHistoryTableViewController () {
+    NSArray *monthlySummaries;
+    NSMutableDictionary *orderedSummaries;
+}
 
 @end
 
@@ -32,6 +43,16 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    monthlySummaries = [[CBMonthlySummaryDAO sharedInstance] allMonthlySummaries];
+    
+    orderedSummaries = [NSMutableDictionary dictionary];
+    
+    for (MonthlySummary *summary in monthlySummaries) {
+        [orderedSummaries setObject:[summary.dailySummaries sortedArrayUsingDescriptors:
+                                    @[[[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO]]]
+                             forKey:[summary date]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,21 +65,28 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 12;
+    return [monthlySummaries count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 31;
+    return [((MonthlySummary *)monthlySummaries[section]).dailySummaries count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"historyCellIdentifier" forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%d.%d", indexPath.section, indexPath.row];
+    MonthlySummary *monthlySummary = monthlySummaries[indexPath.section];
+    DailySummary *dailySummary = orderedSummaries[monthlySummary.date][indexPath.row];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", dailySummary.date, dailySummary.amount];
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return ((MonthlySummary *)monthlySummaries[section]).monthName;
 }
 
 /*

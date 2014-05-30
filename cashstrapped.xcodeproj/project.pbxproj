@@ -20,10 +20,10 @@
 		54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E4191928B000646E9D /* CBMainViewController.m */; };
 		54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1D3E7191928B000646E9D /* CBAddExpenseViewController.m */; };
 		54B1D3EA191928B000646E9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B1D3E9191928B000646E9D /* Images.xcassets */; };
-		54B473D61938F6F600048937 /* MonthlySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B473D51938F6F600048937 /* MonthlySummary.m */; };
 		54B473D91938F79100048937 /* CBMonthlySummaryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B473D81938F79100048937 /* CBMonthlySummaryDAO.m */; };
 		54B473DC1939036000048937 /* CBHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B473DB1939036000048937 /* CBHistoryTableViewController.m */; };
-		54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79619250C0F007B2B90 /* DailySummary.m */; };
+		54B473DF1939072600048937 /* DailySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B473DE1939072600048937 /* DailySummary.m */; };
+		54B473E21939072700048937 /* MonthlySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B473E11939072700048937 /* MonthlySummary.m */; };
 		54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */; };
 		60265B981938FA2000C7DDB9 /* GITextSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60265B951938FA2000C7DDB9 /* GITextSettingCell.m */; };
 		60265B991938FA2000C7DDB9 /* GISwitchSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60265B971938FA2000C7DDB9 /* GISwitchSettingCell.m */; };
@@ -58,14 +58,14 @@
 		54B1D3F8191928B000646E9D /* cashstrappedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cashstrappedTests-Info.plist"; sourceTree = "<group>"; };
 		54B1D3FA191928B000646E9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		54B1D3FC191928B000646E9D /* cashstrappedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cashstrappedTests.m; sourceTree = "<group>"; };
-		54B473D41938F6F600048937 /* MonthlySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthlySummary.h; sourceTree = "<group>"; };
-		54B473D51938F6F600048937 /* MonthlySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthlySummary.m; sourceTree = "<group>"; };
 		54B473D71938F79100048937 /* CBMonthlySummaryDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMonthlySummaryDAO.h; sourceTree = "<group>"; };
 		54B473D81938F79100048937 /* CBMonthlySummaryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMonthlySummaryDAO.m; sourceTree = "<group>"; };
 		54B473DA1939036000048937 /* CBHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHistoryTableViewController.h; sourceTree = "<group>"; };
 		54B473DB1939036000048937 /* CBHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHistoryTableViewController.m; sourceTree = "<group>"; };
-		54BAF79519250C0F007B2B90 /* DailySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailySummary.h; sourceTree = "<group>"; };
-		54BAF79619250C0F007B2B90 /* DailySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailySummary.m; sourceTree = "<group>"; };
+		54B473DD1939072600048937 /* DailySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailySummary.h; sourceTree = "<group>"; };
+		54B473DE1939072600048937 /* DailySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailySummary.m; sourceTree = "<group>"; };
+		54B473E01939072700048937 /* MonthlySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthlySummary.h; sourceTree = "<group>"; };
+		54B473E11939072700048937 /* MonthlySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthlySummary.m; sourceTree = "<group>"; };
 		54BAF79819253AC1007B2B90 /* CBDailySummaryDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDailySummaryDAO.h; sourceTree = "<group>"; };
 		54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDailySummaryDAO.m; sourceTree = "<group>"; };
 		60265B941938FA2000C7DDB9 /* GITextSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GITextSettingCell.h; sourceTree = "<group>"; };
@@ -101,10 +101,10 @@
 		5436F3F719212B5100B889D0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				54B473D41938F6F600048937 /* MonthlySummary.h */,
-				54B473D51938F6F600048937 /* MonthlySummary.m */,
-				54BAF79519250C0F007B2B90 /* DailySummary.h */,
-				54BAF79619250C0F007B2B90 /* DailySummary.m */,
+				54B473E01939072700048937 /* MonthlySummary.h */,
+				54B473E11939072700048937 /* MonthlySummary.m */,
+				54B473DD1939072600048937 /* DailySummary.h */,
+				54B473DE1939072600048937 /* DailySummary.m */,
 				5436F3F419212B3500B889D0 /* Entry.h */,
 				5436F3F519212B3500B889D0 /* Entry.m */,
 				54BAF79819253AC1007B2B90 /* CBDailySummaryDAO.h */,
@@ -339,14 +339,14 @@
 				5436F3F619212B3500B889D0 /* Entry.m in Sources */,
 				60265B981938FA2000C7DDB9 /* GITextSettingCell.m in Sources */,
 				54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */,
+				54B473DF1939072600048937 /* DailySummary.m in Sources */,
 				54B473D91938F79100048937 /* CBMonthlySummaryDAO.m in Sources */,
-				54B473D61938F6F600048937 /* MonthlySummary.m in Sources */,
-				54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */,
 				5436F3F31921244E00B889D0 /* CashStrapped.xcdatamodeld in Sources */,
 				54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */,
 				54B1D3DB191928B000646E9D /* main.m in Sources */,
 				60C53732192A7BCD00F40B05 /* CBSettingsViewController.m in Sources */,
 				605C8026192E778F0031413E /* CBLabel.m in Sources */,
+				54B473E21939072700048937 /* MonthlySummary.m in Sources */,
 				54B1D3DF191928B000646E9D /* CBAppDelegate.m in Sources */,
 				60C53735192A8F9D00F40B05 /* UIImage+Colors.m in Sources */,
 			);

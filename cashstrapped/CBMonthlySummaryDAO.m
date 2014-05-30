@@ -47,7 +47,7 @@ static NSCalendar *gregorianCalendar;
 
 #pragma mark - Insert/Update
 
-- (void)updateMonthlySummaryForDate:(NSDate *)date withAmount:(NSDecimalNumber *)amount {
+- (MonthlySummary *)updateMonthlySummaryForDate:(NSDate *)date withAmount:(NSDecimalNumber *)amount {
     MonthlySummary *summary = [self monthlySummaryForDate:date];
     
     if (! summary) {
@@ -57,6 +57,8 @@ static NSCalendar *gregorianCalendar;
     }
     
     summary.amount = [summary.amount decimalNumberByAdding:amount];
+    
+    return summary;
 }
 
 #pragma mark - Utils
