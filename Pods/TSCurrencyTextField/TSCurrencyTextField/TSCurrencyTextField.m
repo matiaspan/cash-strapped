@@ -49,6 +49,7 @@
     _currencyNumberFormatter.locale = [NSLocale currentLocale];
     _currencyNumberFormatter.numberStyle = kCFNumberFormatterCurrencyStyle;
     _currencyNumberFormatter.usesGroupingSeparator = YES;
+    _currencyNumberFormatter.currencySymbol = @"";
     
     _currencyTextFieldDelegate = [TSCurrencyTextFieldDelegate new];
     [super setDelegate: _currencyTextFieldDelegate];
