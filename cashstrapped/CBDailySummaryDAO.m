@@ -8,6 +8,7 @@
 
 #import "CBDailySummaryDAO.h"
 #import "DailySummary.h"
+#import "CBMonthlySummaryDAO.h"
 
 @implementation CBDailySummaryDAO
 
@@ -15,7 +16,7 @@ static CBDailySummaryDAO *_sharedInstance = nil;
 
 static NSCalendar *gregorianCalendar;
 
-#pragma makr - Singleton
+#pragma mark - Singleton
 
 + (CBDailySummaryDAO *)sharedInstance {
     static dispatch_once_t oncePredicate;
@@ -76,6 +77,9 @@ static NSCalendar *gregorianCalendar;
     }
     
     summary.amount = [summary.amount decimalNumberByAdding:amount];
+    
+    // Make sure we update the monthly values too.
+    [[CBMonthlySummaryDAO sharedInstance] updateMonthlySummaryForDate:date withAmount:amount];
 }
 
 #pragma mark - Utils

@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class MonthlySummary;
+
 @interface CBMonthlySummaryDAO : NSObject
+
+- (MonthlySummary *)monthlySummaryForDate:(NSDate *)date;
+- (NSArray *)allMonthlySummaries;
+
+- (void)updateMonthlySummaryForDate:(NSDate *)date withAmount:(NSDecimalNumber *)amount;
+
++ (CBMonthlySummaryDAO *)sharedInstance;
 
 @end

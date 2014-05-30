@@ -15,7 +15,7 @@ static CBMonthlySummaryDAO *_sharedInstance = nil;
 
 static NSCalendar *gregorianCalendar;
 
-#pragma makr - Singleton
+#pragma mark - Singleton
 
 + (CBMonthlySummaryDAO *)sharedInstance {
     static dispatch_once_t oncePredicate;
@@ -40,7 +40,7 @@ static NSCalendar *gregorianCalendar;
     }
 }
 
-- (NSArray *)allSummaries {
+- (NSArray *)allMonthlySummaries {
     return [MonthlySummary MR_findAllSortedBy:@"date" ascending:NO];
 }
 
