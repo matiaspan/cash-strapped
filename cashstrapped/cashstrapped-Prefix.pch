@@ -17,4 +17,8 @@
     #import <MagicalRecord/MagicalRecord.h>
     #import "CoreData+MagicalRecord.h"
 
+    #define itemType @"itemType"
+    #define itemTitle @"itemTitle"
+    #define itemKey @"itemKey"
+
 #endif

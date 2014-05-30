@@ -25,6 +25,8 @@
 		54B473DC1939036000048937 /* CBHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B473DB1939036000048937 /* CBHistoryTableViewController.m */; };
 		54BAF79719250C0F007B2B90 /* DailySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79619250C0F007B2B90 /* DailySummary.m */; };
 		54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */; };
+		60265B981938FA2000C7DDB9 /* GITextSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60265B951938FA2000C7DDB9 /* GITextSettingCell.m */; };
+		60265B991938FA2000C7DDB9 /* GISwitchSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60265B971938FA2000C7DDB9 /* GISwitchSettingCell.m */; };
 		605C8023192E6B710031413E /* CBDashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C8022192E6B710031413E /* CBDashboardView.m */; };
 		605C8026192E778F0031413E /* CBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C8025192E778F0031413E /* CBLabel.m */; };
 		60C53732192A7BCD00F40B05 /* CBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */; };
@@ -66,6 +68,10 @@
 		54BAF79619250C0F007B2B90 /* DailySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailySummary.m; sourceTree = "<group>"; };
 		54BAF79819253AC1007B2B90 /* CBDailySummaryDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDailySummaryDAO.h; sourceTree = "<group>"; };
 		54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDailySummaryDAO.m; sourceTree = "<group>"; };
+		60265B941938FA2000C7DDB9 /* GITextSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GITextSettingCell.h; sourceTree = "<group>"; };
+		60265B951938FA2000C7DDB9 /* GITextSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GITextSettingCell.m; sourceTree = "<group>"; };
+		60265B961938FA2000C7DDB9 /* GISwitchSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISwitchSettingCell.h; sourceTree = "<group>"; };
+		60265B971938FA2000C7DDB9 /* GISwitchSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISwitchSettingCell.m; sourceTree = "<group>"; };
 		605C8021192E6B710031413E /* CBDashboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDashboardView.h; sourceTree = "<group>"; };
 		605C8022192E6B710031413E /* CBDashboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDashboardView.m; sourceTree = "<group>"; };
 		605C8024192E778F0031413E /* CBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLabel.h; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 		54B1D3D4191928B000646E9D /* cashstrapped */ = {
 			isa = PBXGroup;
 			children = (
+				60265B931938FA0500C7DDB9 /* Cells */,
 				605C8020192E6B600031413E /* Custom Views */,
 				60C53736192A904E00F40B05 /* Categories */,
 				5436F3F719212B5100B889D0 /* Model */,
@@ -191,6 +198,17 @@
 				54B1D3F9191928B000646E9D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60265B931938FA0500C7DDB9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				60265B941938FA2000C7DDB9 /* GITextSettingCell.h */,
+				60265B951938FA2000C7DDB9 /* GITextSettingCell.m */,
+				60265B961938FA2000C7DDB9 /* GISwitchSettingCell.h */,
+				60265B971938FA2000C7DDB9 /* GISwitchSettingCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		605C8020192E6B600031413E /* Custom Views */ = {
@@ -317,7 +335,9 @@
 				54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */,
 				605C8023192E6B710031413E /* CBDashboardView.m in Sources */,
 				54B473DC1939036000048937 /* CBHistoryTableViewController.m in Sources */,
+				60265B991938FA2000C7DDB9 /* GISwitchSettingCell.m in Sources */,
 				5436F3F619212B3500B889D0 /* Entry.m in Sources */,
+				60265B981938FA2000C7DDB9 /* GITextSettingCell.m in Sources */,
 				54B1D3E5191928B000646E9D /* CBMainViewController.m in Sources */,
 				54B473D91938F79100048937 /* CBMonthlySummaryDAO.m in Sources */,
 				54B473D61938F6F600048937 /* MonthlySummary.m in Sources */,
