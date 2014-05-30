@@ -30,8 +30,10 @@
     [self.blurView setBlurRadius:40];
     [self.blurView setBackgroundColor:[UIColor whiteColor]];
     [self.blurView setTintColor:[UIColor clearColor]];
-    
+
     [self.navigationController.navigationBar setBarTintColor:self.backgroundImageView.image.averageColorForTop];
+
+    [self.amountTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning

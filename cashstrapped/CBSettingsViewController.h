@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CBSettingsViewController : UITableViewController
+@class FXBlurView;
+
+@interface CBSettingsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UIImageView *backgroundImageView;
+@property (strong, nonatomic) IBOutlet FXBlurView *blurView;
 
 @end

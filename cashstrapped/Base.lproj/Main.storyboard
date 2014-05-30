@@ -66,7 +66,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="uEs-3O-ATD" customClass="CBLabel">
-                                                        <rect key="frame" x="48" y="95" width="156" height="61"/>
+                                                        <rect key="frame" x="57" y="95" width="138" height="61"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,41 +147,6 @@
             </objects>
             <point key="canvasLocation" x="481" y="-8"/>
         </scene>
-        <!--Settings View Controller - Settings-->
-        <scene sceneID="0gs-0B-Mti">
-            <objects>
-                <tableViewController id="wdd-yV-f3N" customClass="CBSettingsViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LlK-1q-wbq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bUv-xY-tTz">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bUv-xY-tTz" id="k0o-Mm-xI3">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="wdd-yV-f3N" id="4O5-Yx-smZ"/>
-                            <outlet property="delegate" destination="wdd-yV-f3N" id="6K7-vT-xRm"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="iAX-nM-bKq">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="efr-6U-Fvy">
-                            <connections>
-                                <action selector="doneAction:" destination="wdd-yV-f3N" id="0xl-x7-Lby"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j9h-XB-ilC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1015" y="-775"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xqe-0T-Qaa">
             <objects>
@@ -190,12 +155,55 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="wdd-yV-f3N" kind="relationship" relationship="rootViewController" id="r5Y-oc-JJf"/>
+                        <segue destination="jnh-LY-qla" kind="relationship" relationship="rootViewController" id="ty5-aR-jSU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfB-hl-akf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="481" y="-776"/>
+        </scene>
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="DeM-V7-ASb">
+            <objects>
+                <viewController id="jnh-LY-qla" customClass="CBSettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ryg-fV-Tsq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mock_baground" id="KQp-xw-CJf">
+                                <rect key="frame" x="-26" y="-38" width="372" height="644"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="DO6-HR-gLd" customClass="FXBlurView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="blurRadius" value="0"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="dynamic" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="44A-d5-SvD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="dtF-vV-R62">
+                            <connections>
+                                <action selector="doneAction:" destination="jnh-LY-qla" id="YnJ-Ap-arG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="KQp-xw-CJf" id="W07-HM-zeQ"/>
+                        <outlet property="blurView" destination="DO6-HR-gLd" id="Bye-Vy-aT6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKS-xL-Gic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963" y="-776"/>
         </scene>
         <!--Add Expense View Controller - Add Expense-->
         <scene sceneID="z9J-Vg-hzE">
