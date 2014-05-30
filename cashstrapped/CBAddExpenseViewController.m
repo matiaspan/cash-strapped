@@ -32,14 +32,10 @@
     [self.blurView setTintColor:[UIColor clearColor]];
 
     [self.navigationController.navigationBar setBarTintColor:self.backgroundImageView.image.averageColorForTop];
-
-    [self.amountTextField becomeFirstResponder];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.3f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.amountTextField becomeFirstResponder];
+    });
 }
 
 #pragma mark - Actions
