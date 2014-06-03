@@ -78,12 +78,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"historyCellIdentifier" forIndexPath:indexPath];
+    CBHistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"historyCellIdentifier" forIndexPath:indexPath];
     
     MonthlySummary *monthlySummary = monthlySummaries[indexPath.section];
     DailySummary *dailySummary = orderedSummaries[monthlySummary.date][indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", dailySummary.date, dailySummary.amount];
+    [cell configureWithDailySummary:dailySummary];
     
     return cell;
 }

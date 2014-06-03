@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class DailySummary;
+
 @interface CBHistoryTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *dayNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dayNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;
+@property (weak, nonatomic) IBOutlet UIView *progressView;
+
+- (void)configureWithDailySummary:(DailySummary *)dailySummary;
 
 @end
