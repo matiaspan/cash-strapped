@@ -16,6 +16,9 @@
 #import "MonthlySummary.h"
 #import "DailySummary.h"
 
+// Custom Views
+#import "CBHistoryTableViewCell.h"
+
 @interface CBHistoryTableViewController () {
     NSArray *monthlySummaries;
     NSMutableDictionary *orderedSummaries;

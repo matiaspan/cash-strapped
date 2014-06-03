@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49AFFDF1232A4F23A76D6143 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1D6B7D2E3648399EEC2ECE /* libPods.a */; };
+		54067D39193E3FDE007C0B78 /* CBHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54067D38193E3FDE007C0B78 /* CBHistoryTableViewCell.m */; };
 		5436F3F31921244E00B889D0 /* CashStrapped.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5436F3F11921244E00B889D0 /* CashStrapped.xcdatamodeld */; };
 		5436F3F619212B3500B889D0 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5436F3F519212B3500B889D0 /* Entry.m */; };
 		54B1D3CF191928B000646E9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1D3CE191928B000646E9D /* Foundation.framework */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		30F1C36DAB764763B1EC594E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		54067D37193E3FDE007C0B78 /* CBHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHistoryTableViewCell.h; sourceTree = "<group>"; };
+		54067D38193E3FDE007C0B78 /* CBHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHistoryTableViewCell.m; sourceTree = "<group>"; };
 		5436F3F21921244E00B889D0 /* CashStrapped.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CashStrapped.xcdatamodel; sourceTree = "<group>"; };
 		5436F3F419212B3500B889D0 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entry.h; path = cashstrapped/Entry.h; sourceTree = SOURCE_ROOT; };
 		5436F3F519212B3500B889D0 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = cashstrapped/Entry.m; sourceTree = SOURCE_ROOT; };
@@ -231,6 +234,8 @@
 				605C8022192E6B710031413E /* CBDashboardView.m */,
 				605C8024192E778F0031413E /* CBLabel.h */,
 				605C8025192E778F0031413E /* CBLabel.m */,
+				54067D37193E3FDE007C0B78 /* CBHistoryTableViewCell.h */,
+				54067D38193E3FDE007C0B78 /* CBHistoryTableViewCell.m */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				5436F3F31921244E00B889D0 /* CashStrapped.xcdatamodeld in Sources */,
 				54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */,
 				54B1D3DB191928B000646E9D /* main.m in Sources */,
+				54067D39193E3FDE007C0B78 /* CBHistoryTableViewCell.m in Sources */,
 				60C53732192A7BCD00F40B05 /* CBSettingsViewController.m in Sources */,
 				605C8026192E778F0031413E /* CBLabel.m in Sources */,
 				54B473E21939072700048937 /* MonthlySummary.m in Sources */,
