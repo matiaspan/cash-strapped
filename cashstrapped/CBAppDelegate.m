@@ -8,6 +8,7 @@
 
 #import "CBAppDelegate.h"
 #import "MagicalRecord+Setup.h"
+#import "BackgroundImage.h"
 
 #import "Entry.h"
 #import "CBDailySummaryDAO.h"
@@ -65,16 +66,48 @@ NSString * const kFlickrSecret = @"fc68f719f5eadd40";
     [self mockupInitialImport];
     
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
-
+    
     _flickr = [[ObjectiveFlickr alloc] initWithAPIKey:kFlickrAPIKey sharedSecret:kFlickrSecret];
-
-    [_flickr sendWithMethod:@"GET" path:@"flickr.interestingness.getList" arguments:@{@"per_page": @3} success:^(NSDictionary *responseDictionary) {
-
-    } failure:^(NSInteger statusCode, NSError *error) {
-
-    }];
+    
+    [self downloadImagesIfNecessary];
     
     return YES;
+}
+
+- (void)downloadImagesIfNecessary {
+    
+    if ([BackgroundImage countOfUnusedImages] > 3) {
+        return;
+    }
+    
+    [_flickr sendWithMethod:@"GET" path:@"flickr.interestingness.getList" arguments:@{@"per_page": @10} success:^(NSDictionary *responseDictionary) {
+        
+        NSArray *photos = responseDictionary[@"photos"][@"photo"];
+        
+        for (NSDictionary *photo in photos) {
+            
+            NSString *imageId = [photo[@"id"] description];
+
+            BackgroundImage *image = [BackgroundImage imageWithImageId:imageId];
+            
+            if (!image) {
+                image = [BackgroundImage MR_createEntity];
+                image.used = @NO;
+                image.imageData = nil;
+                image.imageId = imageId;
+                image.serverId = [photo[@"server"] description];
+                image.farmId = [photo[@"farm"] description];
+                image.secret = [photo[@"secret"] description];
+                
+                [image downloadAndCacheImageData];
+            }
+        }
+        
+        [[NSManagedObjectContext MR_contextForCurrentThread] MR_saveToPersistentStoreWithCompletion:nil];
+        
+    } failure:^(NSInteger statusCode, NSError *error) {
+        
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -12,6 +12,7 @@
 #import "DailySummary.h"
 #import "CBDailySummaryDAO.h"
 #import "CBDashboardView.h"
+#import "BackgroundImage.h"
 
 @interface CBMainViewController () {
     BOOL animatedHeader;
@@ -35,6 +36,13 @@
     self.addExpenseHeaderView.alpha = 0.f;
     
     self.backgroundImageView.parallaxIntensity = -48;
+    
+    BackgroundImage *backgroundImage = [BackgroundImage imageForToday];
+    if (backgroundImage.imageData) {
+        self.backgroundImageView.image = [UIImage imageWithData:backgroundImage.imageData];
+    } else {
+        self.backgroundImageView.image = [UIImage imageNamed:@"mock_baground"];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -30,6 +30,8 @@
 		60265B991938FA2000C7DDB9 /* GISwitchSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60265B971938FA2000C7DDB9 /* GISwitchSettingCell.m */; };
 		605C8023192E6B710031413E /* CBDashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C8022192E6B710031413E /* CBDashboardView.m */; };
 		605C8026192E778F0031413E /* CBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C8025192E778F0031413E /* CBLabel.m */; };
+		6079657D193E3D6000A04643 /* BackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6079657C193E3D6000A04643 /* BackgroundImage.m */; };
+		60796580193E456400A04643 /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6079657F193E456400A04643 /* NSDate+Utils.m */; };
 		60A64CE719390C0800DDCF13 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 60A64CDF19390C0800DDCF13 /* .gitignore */; };
 		60A64CE819390C0800DDCF13 /* ObjectiveFlickr.bridgesupport in Resources */ = {isa = PBXBuildFile; fileRef = 60A64CE119390C0800DDCF13 /* ObjectiveFlickr.bridgesupport */; };
 		60A64CE919390C0800DDCF13 /* ObjectiveFlickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A64CE319390C0800DDCF13 /* ObjectiveFlickr.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -84,6 +86,10 @@
 		605C8022192E6B710031413E /* CBDashboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDashboardView.m; sourceTree = "<group>"; };
 		605C8024192E778F0031413E /* CBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLabel.h; sourceTree = "<group>"; };
 		605C8025192E778F0031413E /* CBLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLabel.m; sourceTree = "<group>"; };
+		6079657B193E3D6000A04643 /* BackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundImage.h; sourceTree = "<group>"; };
+		6079657C193E3D6000A04643 /* BackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundImage.m; sourceTree = "<group>"; };
+		6079657E193E456400A04643 /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
+		6079657F193E456400A04643 /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
 		60A64CDF19390C0800DDCF13 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		60A64CE119390C0800DDCF13 /* ObjectiveFlickr.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ObjectiveFlickr.bridgesupport; sourceTree = "<group>"; };
 		60A64CE219390C0800DDCF13 /* ObjectiveFlickr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveFlickr.h; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 				54B473DE1939072600048937 /* DailySummary.m */,
 				5436F3F419212B3500B889D0 /* Entry.h */,
 				5436F3F519212B3500B889D0 /* Entry.m */,
+				6079657B193E3D6000A04643 /* BackgroundImage.h */,
+				6079657C193E3D6000A04643 /* BackgroundImage.m */,
 				54BAF79819253AC1007B2B90 /* CBDailySummaryDAO.h */,
 				54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */,
 				54B473D71938F79100048937 /* CBMonthlySummaryDAO.h */,
@@ -169,11 +177,11 @@
 				605C8020192E6B600031413E /* Custom Views */,
 				60C53736192A904E00F40B05 /* Categories */,
 				5436F3F719212B5100B889D0 /* Model */,
+				54B1D3E0191928B000646E9D /* Main.storyboard */,
 				54B1D3DD191928B000646E9D /* CBAppDelegate.h */,
+				54B1D3DE191928B000646E9D /* CBAppDelegate.m */,
 				54B473DA1939036000048937 /* CBHistoryTableViewController.h */,
 				54B473DB1939036000048937 /* CBHistoryTableViewController.m */,
-				54B1D3DE191928B000646E9D /* CBAppDelegate.m */,
-				54B1D3E0191928B000646E9D /* Main.storyboard */,
 				54B1D3E3191928B000646E9D /* CBMainViewController.h */,
 				54B1D3E4191928B000646E9D /* CBMainViewController.m */,
 				54B1D3E6191928B000646E9D /* CBAddExpenseViewController.h */,
@@ -267,6 +275,8 @@
 			children = (
 				60C53733192A8F9D00F40B05 /* UIImage+Colors.h */,
 				60C53734192A8F9D00F40B05 /* UIImage+Colors.m */,
+				6079657E193E456400A04643 /* NSDate+Utils.h */,
+				6079657F193E456400A04643 /* NSDate+Utils.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -376,8 +386,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */,
+				60796580193E456400A04643 /* NSDate+Utils.m in Sources */,
 				605C8023192E6B710031413E /* CBDashboardView.m in Sources */,
 				60A64CE919390C0800DDCF13 /* ObjectiveFlickr.m in Sources */,
+				6079657D193E3D6000A04643 /* BackgroundImage.m in Sources */,
 				54B473DC1939036000048937 /* CBHistoryTableViewController.m in Sources */,
 				60265B991938FA2000C7DDB9 /* GISwitchSettingCell.m in Sources */,
 				5436F3F619212B3500B889D0 /* Entry.m in Sources */,
