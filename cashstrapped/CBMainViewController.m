@@ -59,7 +59,6 @@
     
     [self.dashboardView setAmountValue:amountLeft];
     self.dashboardView.budgetLabel.text = [NSString stringWithFormat:@"BUDGET\n%@", budget];
-
 }
 
 - (void)didReceiveMemoryWarning

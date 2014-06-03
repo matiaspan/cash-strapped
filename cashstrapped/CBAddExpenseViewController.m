@@ -43,7 +43,9 @@
 #pragma mark - Actions
 
 - (IBAction)done:(id)sender {
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kUDAddExpenseNotification object:nil];
+    }];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 

@@ -21,4 +21,6 @@
     #define itemTitle @"itemTitle"
     #define itemKey @"itemKey"
 
+    #define kUDAddExpenseNotification @"kUDAddExpenseNotification"
+
 #endif
