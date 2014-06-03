@@ -28,6 +28,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     maxWidth = _progressView.frame.size.width;
 }
 
@@ -53,9 +54,7 @@
     _dayNumberLabel.text = [NSString stringWithFormat:@"%d", [components day]];
     _amountLabel.text = [NSString stringWithFormat:@"%.2f", [dailySummary.amount doubleValue]];
     
-    CGFloat min = MIN(dailySummary.amount.doubleValue, dailySummary.dailyBudget.doubleValue);
-    CGFloat max = MAX(dailySummary.amount.doubleValue, dailySummary.dailyBudget.doubleValue);
-    CGFloat partial = (int)min/max * maxWidth;
+    CGFloat partial = MIN(maxWidth, (int)(dailySummary.amount.floatValue / dailySummary.dailyBudget.floatValue * maxWidth));
 
     _progressView.frame = CGRectMake(_progressView.frame.origin.x, _progressView.frame.origin.y,
                                      0, _progressView.frame.size.height);
