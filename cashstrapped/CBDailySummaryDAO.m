@@ -74,6 +74,9 @@ static NSCalendar *gregorianCalendar;
     if (! summary) {
         summary = [DailySummary MR_createEntity];
         summary.date = [self filterOutDateComponentsFromDate:date];
+        
+        // TODO: REMOVE ME
+        summary.dailyBudget = [[NSDecimalNumber alloc] initWithUnsignedInteger:1000];
     }
     
     summary.amount = [summary.amount decimalNumberByAdding:amount];

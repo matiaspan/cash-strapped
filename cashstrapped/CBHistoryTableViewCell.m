@@ -53,10 +53,18 @@
     _dayNumberLabel.text = [NSString stringWithFormat:@"%d", [components day]];
     _amountLabel.text = [NSString stringWithFormat:@"%.2f", [dailySummary.amount doubleValue]];
     
-    _progressView.frame = CGRectMake(_progressView.frame.origin.x,
-                                     _progressView.frame.origin.y,
-                                     (int)([dailySummary.amount doubleValue] / [dailySummary.dailyBudget doubleValue] * maxWidth),
-                                     _progressView.frame.size.height);
+    CGFloat min = MIN(dailySummary.amount.doubleValue, dailySummary.dailyBudget.doubleValue);
+    CGFloat max = MAX(dailySummary.amount.doubleValue, dailySummary.dailyBudget.doubleValue);
+    CGFloat partial = (int)min/max * maxWidth;
+
+    _progressView.frame = CGRectMake(_progressView.frame.origin.x, _progressView.frame.origin.y,
+                                     0, _progressView.frame.size.height);
+    [UIView animateWithDuration:0.3 animations:^{
+        _progressView.frame = CGRectMake(_progressView.frame.origin.x,
+                                         _progressView.frame.origin.y,
+                                         partial > 0 ? partial : 0,
+                                         _progressView.frame.size.height);
+    }];
 }
 
 @end
