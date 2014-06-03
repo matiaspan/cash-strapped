@@ -14,6 +14,7 @@
 
 #import <FXBlurView/FXBlurView.h>
 #import <TSCurrencyTextField/TSCurrencyTextField.h>
+#import "BackgroundImage.h"
 
 @interface CBAddExpenseViewController ()
 
@@ -21,23 +22,26 @@
 
 @implementation CBAddExpenseViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.blurView setBlurEnabled:YES];
-    [self.blurView setDynamic:NO];
-    [self.blurView setBlurRadius:40];
-    [self.blurView setBackgroundColor:[UIColor whiteColor]];
-    [self.blurView setTintColor:[UIColor clearColor]];
+    BackgroundImage *backgroundImage = [BackgroundImage imageForToday];
+    if (backgroundImage.imageData) {
+        self.backgroundImageView.image = [UIImage imageWithData:backgroundImage.imageData];
+    } else {
+        self.backgroundImageView.image = [UIImage imageNamed:@"mock_baground"];
+    }
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
 
-    [self.navigationController.navigationBar setBarTintColor:self.backgroundImageView.image.averageColorForTop];
+    
+    self.amountTextField.currencyNumberFormatter.currencySymbol = @"";
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.3f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.amountTextField becomeFirstResponder];
     });
-    
-    self.amountTextField.currencyNumberFormatter.currencySymbol = @"";
 }
 
 #pragma mark - Actions

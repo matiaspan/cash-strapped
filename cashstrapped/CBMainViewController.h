@@ -10,7 +10,7 @@
 
 @class CBDashboardView;
 
-@interface CBMainViewController : UIViewController <CBFlipsideViewControllerDelegate, UIScrollViewDelegate>
+@interface CBMainViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *addExpenseHeaderView;

@@ -60,8 +60,6 @@ NSString * const kFlickrSecret = @"fc68f719f5eadd40";
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"CashStrapped"];
     
-    self.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    
     // TODO: REMOVE ME BEFORE SHIPPING.
     [self mockupInitialImport];
     

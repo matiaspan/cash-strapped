@@ -112,23 +112,4 @@
     }
 }
 
-#pragma mark - Flipside View
-
-- (void)flipsideViewControllerDidFinish:(CBAddExpenseViewController *)controller
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    UIViewController *destinationViewController = [segue destinationViewController];
-    destinationViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    
-    destinationViewController.view.transform = CGAffineTransformMakeTranslation(0, destinationViewController.view.frame.size.height);
-    
-    [UIView animateWithDuration:.3f delay:.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
-        destinationViewController.view.transform = CGAffineTransformIdentity;
-    } completion:nil];
-}
-
 @end
