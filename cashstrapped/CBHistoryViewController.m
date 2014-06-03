@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Cannonball HQ. All rights reserved.
 //
 
-#import "CBHistoryTableViewController.h"
+#import "CBHistoryViewController.h"
 
 // DAO
 #import "CBMonthlySummaryDAO.h"
@@ -19,23 +19,14 @@
 // Custom Views
 #import "CBHistoryTableViewCell.h"
 
-@interface CBHistoryTableViewController () {
+@interface CBHistoryViewController () {
     NSArray *monthlySummaries;
     NSMutableDictionary *orderedSummaries;
 }
 
 @end
 
-@implementation CBHistoryTableViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@implementation CBHistoryViewController
 
 - (void)viewDidLoad
 {
