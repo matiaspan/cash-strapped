@@ -11,6 +11,7 @@
 #import <FXBlurView/FXBlurView.h>
 #import "GITextSettingCell.h"
 #import "GISwitchSettingCell.h"
+#import "BackgroundImage.h"
 
 #define sectionTitle @"sectionTitle"
 #define sectionItems @"sectionItems"
@@ -32,14 +33,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    BackgroundImage *backgroundImage = [BackgroundImage imageForToday];
+    if (backgroundImage.imageData) {
+        self.backgroundImageView.image = [UIImage imageWithData:backgroundImage.imageData];
+    } else {
+        self.backgroundImageView.image = [UIImage imageNamed:@"mock_baground"];
+    }
     
-    [self.blurView setBlurEnabled:YES];
-    [self.blurView setDynamic:NO];
-    [self.blurView setBlurRadius:40];
-    [self.blurView setBackgroundColor:[UIColor whiteColor]];
-    [self.blurView setTintColor:[UIColor clearColor]];
-    
-    [self.navigationController.navigationBar setBarTintColor:self.backgroundImageView.image.averageColorForTop];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
     
     sections = @[
                  @{sectionTitle: NSLocalizedString(@"Budget Settings", ""),

@@ -168,6 +168,9 @@
                 <navigationController definesPresentationContext="YES" id="8wx-VH-Wzz" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OH9-RQ-Nd5">
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="jnh-LY-qla" kind="relationship" relationship="rootViewController" id="ty5-aR-jSU"/>
@@ -197,6 +200,21 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="blurRadius" value="40"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                         <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="dynamic" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" id="cb1-DA-7k7" userLabel="Navigation Bar Blur View" customClass="FXBlurView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blurRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="dynamic" value="NO"/>
                                 </userDefinedRuntimeAttributes>
@@ -319,7 +337,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="dynamic" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" id="wGy-kY-OZ4" customClass="FXBlurView">
+                            <view contentMode="scaleToFill" id="wGy-kY-OZ4" userLabel="Navigation Bar Blur View" customClass="FXBlurView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
