@@ -39,6 +39,8 @@
 		60A64CEB19390C0800DDCF13 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 60A64CE619390C0800DDCF13 /* README.md */; };
 		60C53732192A7BCD00F40B05 /* CBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */; };
 		60C53735192A8F9D00F40B05 /* UIImage+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C53734192A8F9D00F40B05 /* UIImage+Colors.m */; };
+		60ED43BE194232330093381A /* GISettingsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED43BD194232330093381A /* GISettingsHelper.m */; };
+		60ED43C1194232DC0093381A /* CBChangeover.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED43C0194232DC0093381A /* CBChangeover.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,10 @@
 		60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSettingsViewController.m; sourceTree = "<group>"; };
 		60C53733192A8F9D00F40B05 /* UIImage+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Colors.h"; sourceTree = "<group>"; };
 		60C53734192A8F9D00F40B05 /* UIImage+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Colors.m"; sourceTree = "<group>"; };
+		60ED43BC194232330093381A /* GISettingsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISettingsHelper.h; sourceTree = "<group>"; };
+		60ED43BD194232330093381A /* GISettingsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISettingsHelper.m; sourceTree = "<group>"; };
+		60ED43BF194232DC0093381A /* CBChangeover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBChangeover.h; sourceTree = "<group>"; };
+		60ED43C0194232DC0093381A /* CBChangeover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBChangeover.m; sourceTree = "<group>"; };
 		DA1D6B7D2E3648399EEC2ECE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +179,7 @@
 		54B1D3D4191928B000646E9D /* cashstrapped */ = {
 			isa = PBXGroup;
 			children = (
+				60ED43BB1942321D0093381A /* Helper */,
 				60265B931938FA0500C7DDB9 /* Cells */,
 				605C8020192E6B600031413E /* Custom Views */,
 				60C53736192A904E00F40B05 /* Categories */,
@@ -279,6 +286,17 @@
 				6079657F193E456400A04643 /* NSDate+Utils.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		60ED43BB1942321D0093381A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				60ED43BC194232330093381A /* GISettingsHelper.h */,
+				60ED43BD194232330093381A /* GISettingsHelper.m */,
+				60ED43BF194232DC0093381A /* CBChangeover.h */,
+				60ED43C0194232DC0093381A /* CBChangeover.m */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,12 +419,14 @@
 				54B1D3E8191928B000646E9D /* CBAddExpenseViewController.m in Sources */,
 				54B1D3DB191928B000646E9D /* main.m in Sources */,
 				54067D39193E3FDE007C0B78 /* CBHistoryTableViewCell.m in Sources */,
+				60ED43C1194232DC0093381A /* CBChangeover.m in Sources */,
 				60C53732192A7BCD00F40B05 /* CBSettingsViewController.m in Sources */,
 				605C8026192E778F0031413E /* CBLabel.m in Sources */,
 				54B473E21939072700048937 /* MonthlySummary.m in Sources */,
 				54B1D3DF191928B000646E9D /* CBAppDelegate.m in Sources */,
 				60A64CEA19390C0800DDCF13 /* OFUtilities.m in Sources */,
 				60C53735192A8F9D00F40B05 /* UIImage+Colors.m in Sources */,
+				60ED43BE194232330093381A /* GISettingsHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

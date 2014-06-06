@@ -19,10 +19,6 @@
 #define itemTypeText @"itemTypeText"
 #define itemTypeSwitch @"itemTypeSwitch"
 
-#define itemKeyBudget @"itemKeyBudget"
-#define itemKeyChangeoverDay @"itemKeyChangeoverDay"
-#define itemKeyRolloverBehavior @"itemKeyRolloverBehavior"
-
 @interface CBSettingsViewController () {
     NSArray *sections;
 }
@@ -48,9 +44,9 @@
     sections = @[
                  @{sectionTitle: NSLocalizedString(@"Budget Settings", ""),
                    sectionItems: @[
-                           @{itemTitle: NSLocalizedString(@"Budget", ""), itemType: itemTypeText, itemKey: itemKeyBudget},
-                           @{itemTitle: NSLocalizedString(@"Changeover Day", ""), itemType: itemTypeText, itemKey: itemKeyChangeoverDay},
-                           @{itemTitle: NSLocalizedString(@"Rollover Behavior", ""), itemType: itemTypeText, itemKey: itemKeyRolloverBehavior}]}];
+                           @{itemTitle: NSLocalizedString(@"Budget", ""), itemType: itemTypeText, itemKey: kUDBudgetKey},
+                           @{itemTitle: NSLocalizedString(@"Changeover Day", ""), itemType: itemTypeText, itemKey: kUDChangeoverDayKey},
+                           @{itemTitle: NSLocalizedString(@"Rollover Behavior", ""), itemType: itemTypeText, itemKey: kUDRolloverBehaviorKey}]}];
     
 }
 

@@ -7,8 +7,14 @@
 //
 
 #import "GITextSettingCell.h"
-//#import "GISettingsHelper.h"
+#import "CBChangeover.h"
 
+
+@interface GITextSettingCell () {
+    NSNumberFormatter *numberFormatter;
+}
+
+@end
 @implementation GITextSettingCell
 
 - (void)awakeFromNib {
@@ -18,27 +24,25 @@
 - (void)configureWithSettingsItem:(NSDictionary *)item {
     self.titleLabel.text = item[itemTitle];
     
-//    if ([item[itemKey] isEqual:itemKeyPomodoroLength]) {
-//        self.valueLabel.text = [NSString stringWithFormat:@"%.0f %@",
-//                                [GISettingsHelper sharedInstance].pomodoroLength / 60, NSLocalizedString(@"minutes", "")];
-//    } else if ([item[itemKey] isEqual:itemKeyShortBreakLength]) {
-//        self.valueLabel.text = [NSString stringWithFormat:@"%.0f %@",
-//                                [GISettingsHelper sharedInstance].breakLength / 60, NSLocalizedString(@"minutes", "")];
-//    } else if ([item[itemKey] isEqual:itemKeyLongBreakLength]) {
-//        self.valueLabel.text = [NSString stringWithFormat:@"%.0f %@",
-//                                [GISettingsHelper sharedInstance].longBreakLength / 60, NSLocalizedString(@"minutes", "")];
-//    } else if ([item[itemKey] isEqual:itemKeyLongBreakDelayLength]) {
-//        self.valueLabel.text = [NSString stringWithFormat:@"%d %@",
-//                                [GISettingsHelper sharedInstance].longBreakDelay, NSLocalizedString(@"pomodoros", "")];
-//    } else if ([item[itemKey] isEqual:itemKeyTargetPomodoros]) {
-//        self.valueLabel.text = [NSString stringWithFormat:@"%d",
-//                                [GISettingsHelper sharedInstance].targetPomodoros];
-//    } else if ([item[itemKey] isEqual:itemKeyAlarmSound]) {
-//        self.valueLabel.text = NSLocalizedString([GISettingsHelper sharedInstance].alarmSound, "");
-//        
-//    } else {
+    if (!numberFormatter) {
+        numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        [numberFormatter setMaximumFractionDigits:2];
+        [numberFormatter setNilSymbol:@"—"];
+        [numberFormatter setLenient:YES];
+        [numberFormatter setCurrencySymbol:@""];
+        [numberFormatter setInternationalCurrencySymbol:@""];
+    }
+    
+    if ([item[itemKey] isEqual:kUDBudgetKey]) {
+        self.valueLabel.text = [numberFormatter stringFromNumber:@([GISettingsHelper sharedInstance].budget)];
+    } else if ([item[itemKey] isEqual:kUDChangeoverDayKey]) {
+        self.valueLabel.text = [[GISettingsHelper sharedInstance].changeoverDay description];
+    } else if ([item[itemKey] isEqual:kUDRolloverBehaviorKey]) {
+        self.valueLabel.text = [GISettingsHelper sharedInstance].rolloverBehavior;
+    } else {
         self.valueLabel.text = @"";
-//    }
+    }
 }
 
 @end
