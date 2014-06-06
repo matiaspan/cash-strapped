@@ -32,9 +32,11 @@
 
     BackgroundImage *backgroundImage = [BackgroundImage imageForToday];
     if (backgroundImage.imageData) {
-        self.backgroundImageView.image = [UIImage imageWithData:backgroundImage.imageData];
+        self.backgroundImageView.image = nil;
+        self.backgroundImageView.backgroundColor = [[UIImage imageWithData:backgroundImage.imageData] averageColor];
     } else {
-        self.backgroundImageView.image = [UIImage imageNamed:@"mock_baground"];
+        self.backgroundImageView.image = nil;
+        self.backgroundImageView.backgroundColor = [[UIImage imageNamed:@"mock_baground"] averageColor];
     }
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
@@ -48,6 +50,11 @@
                            @{itemTitle: NSLocalizedString(@"Changeover Day", ""), itemType: itemTypeText, itemKey: kUDChangeoverDayKey},
                            @{itemTitle: NSLocalizedString(@"Rollover Behavior", ""), itemType: itemTypeText, itemKey: kUDRolloverBehaviorKey}]}];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (IBAction)doneAction:(id)sender {
@@ -83,6 +90,22 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return section == 0 ? 12.0f : 5.0f;
+    return 35;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return sections[section][sectionTitle];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *item = sections[indexPath.section][sectionItems][indexPath.row];
+    
+    if ([item[itemKey] isEqualToString:kUDBudgetKey]) {
+        [self performSegueWithIdentifier:@"Budget Segue" sender:nil];
+    } else if ([item[itemKey] isEqualToString:kUDRolloverBehaviorKey]) {
+        [self performSegueWithIdentifier:@"Rollover Segue" sender:nil];
+    } else if ([item[itemKey] isEqualToString:kUDChangeoverDayKey]) {
+        [self performSegueWithIdentifier:@"Changeover Segue" sender:nil];
+    }
 }
 @end

@@ -28,6 +28,7 @@
 		54BAF79A19253AC1007B2B90 /* CBDailySummaryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF79919253AC1007B2B90 /* CBDailySummaryDAO.m */; };
 		60265B981938FA2000C7DDB9 /* GITextSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60265B951938FA2000C7DDB9 /* GITextSettingCell.m */; };
 		60265B991938FA2000C7DDB9 /* GISwitchSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60265B971938FA2000C7DDB9 /* GISwitchSettingCell.m */; };
+		60458A911942440000DC8DEE /* CBBudgetSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60458A901942440000DC8DEE /* CBBudgetSettingViewController.m */; };
 		605C8023192E6B710031413E /* CBDashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C8022192E6B710031413E /* CBDashboardView.m */; };
 		605C8026192E778F0031413E /* CBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C8025192E778F0031413E /* CBLabel.m */; };
 		6079657D193E3D6000A04643 /* BackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6079657C193E3D6000A04643 /* BackgroundImage.m */; };
@@ -84,6 +85,8 @@
 		60265B951938FA2000C7DDB9 /* GITextSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GITextSettingCell.m; sourceTree = "<group>"; };
 		60265B961938FA2000C7DDB9 /* GISwitchSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISwitchSettingCell.h; sourceTree = "<group>"; };
 		60265B971938FA2000C7DDB9 /* GISwitchSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISwitchSettingCell.m; sourceTree = "<group>"; };
+		60458A8F1942440000DC8DEE /* CBBudgetSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBudgetSettingViewController.h; sourceTree = "<group>"; };
+		60458A901942440000DC8DEE /* CBBudgetSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBudgetSettingViewController.m; sourceTree = "<group>"; };
 		605C8021192E6B710031413E /* CBDashboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDashboardView.h; sourceTree = "<group>"; };
 		605C8022192E6B710031413E /* CBDashboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDashboardView.m; sourceTree = "<group>"; };
 		605C8024192E778F0031413E /* CBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLabel.h; sourceTree = "<group>"; };
@@ -193,8 +196,7 @@
 				54B1D3E4191928B000646E9D /* CBMainViewController.m */,
 				54B1D3E6191928B000646E9D /* CBAddExpenseViewController.h */,
 				54B1D3E7191928B000646E9D /* CBAddExpenseViewController.m */,
-				60C53730192A7BCD00F40B05 /* CBSettingsViewController.h */,
-				60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */,
+				60458A921942443200DC8DEE /* Settings */,
 				54B1D3E9191928B000646E9D /* Images.xcassets */,
 				54B1D3D5191928B000646E9D /* Supporting Files */,
 			);
@@ -240,6 +242,17 @@
 				60265B971938FA2000C7DDB9 /* GISwitchSettingCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		60458A921942443200DC8DEE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				60C53730192A7BCD00F40B05 /* CBSettingsViewController.h */,
+				60C53731192A7BCD00F40B05 /* CBSettingsViewController.m */,
+				60458A8F1942440000DC8DEE /* CBBudgetSettingViewController.h */,
+				60458A901942440000DC8DEE /* CBBudgetSettingViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		605C8020192E6B600031413E /* Custom Views */ = {
@@ -424,6 +437,7 @@
 				605C8026192E778F0031413E /* CBLabel.m in Sources */,
 				54B473E21939072700048937 /* MonthlySummary.m in Sources */,
 				54B1D3DF191928B000646E9D /* CBAppDelegate.m in Sources */,
+				60458A911942440000DC8DEE /* CBBudgetSettingViewController.m in Sources */,
 				60A64CEA19390C0800DDCF13 /* OFUtilities.m in Sources */,
 				60C53735192A8F9D00F40B05 /* UIImage+Colors.m in Sources */,
 				60ED43BE194232330093381A /* GISettingsHelper.m in Sources */,
