@@ -84,7 +84,9 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return ((MonthlySummary *)monthlySummaries[section]).monthName;
+    MonthlySummary *monthlySummary = monthlySummaries[section];
+    
+    return [NSString stringWithFormat:@"%@ - %.2f", monthlySummary.monthName, [monthlySummary.amount floatValue]];
 }
 
 - (void)dealloc {
